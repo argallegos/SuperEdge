@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 //Alex Gallegos main player script
-[RequireComponent(typeof(MoveController))]
 
 public class PlayerScript : MonoBehaviour {
 
@@ -14,8 +13,8 @@ public class PlayerScript : MonoBehaviour {
         public Vector2 Sensitivity;
     }
 
-    public float speed, moveForce, jumpForce;
-    public GameObject playerMesh;
+    public float speed, jumpForce;
+    public GameObject playerMesh, feet;
     public Vector2 direction;
     public Vector3 aimOffset;
 
@@ -36,26 +35,12 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] MouseInput MouseControl;
 
     InputController playerInput;
-    ThirdPersonCamera camScript;
     Vector2 mouseInput;
 
-/*
-    private Crosshair m_Crosshair;
-    private Crosshair Crosshair
-    {
-        get
-        {
-            if (m_Crosshair == null)
-                m_Crosshair = GetComponentInChildren<Crosshair>();
-            return m_Crosshair;
-        }
-    }
-
-*/
 
     void Awake () {
         playerInput = GetComponent<InputController>();
-        camScript = mainCam.GetComponent<ThirdPersonCamera>();
+
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
         playerRB.velocity = Vector3.zero;
@@ -65,7 +50,6 @@ public class PlayerScript : MonoBehaviour {
 	
 	void Update () {
 
-        //crosshairPos = Crosshair.crosshairPos;
 
         pInputHorizontal = playerInput.Horizontal;
         direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
@@ -74,25 +58,16 @@ public class PlayerScript : MonoBehaviour {
         inputs.x = playerInput.Horizontal;
         inputs.z = playerInput.Vertical;
 
-       // if (inputs != Vector3.zero)
-          //  transform.forward = inputs;
-
-
         if (playerInput.jump && OnGround()) Jump();
-
-        int layerMask = 1 << 9;
-        layerMask = ~layerMask;
 
         Look();
 
-	}
+    }
     private void FixedUpdate()
     {
-        facingDirection = mainCam.transform.forward;
-        //Vector3 newPosition = playerRB.position + transform.TransformDirection(playerRB.transform.forward);
-        //if (inputs != Vector3.zero)
-        //    playerRB.MovePosition(playerRB.transform.forward + inputs * speed * Time.fixedDeltaTime);
-        playerRB.AddForce(transform.forward * speed * playerInput.Vertical);
+        direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
+        if (inputs != Vector3.zero) Move(direction);
+
     }
 
     void Look()
@@ -102,28 +77,23 @@ public class PlayerScript : MonoBehaviour {
 
         transform.Rotate(Vector3.up * mouseInput.x * MouseControl.Sensitivity.x);
 
-        //Crosshair.LookHeight(mouseInput.y * MouseControl.Sensitivity.y);
-        //cameraPivot.SetRotation(mouseInput.y * MouseControl.Sensitivity.y);
     }
 
-    void Move()
+    public void Move(Vector2 direction)
     {
-        //ADDFORCE MOVE
+        transform.position += transform.forward * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
 
-
-
-        facingDirection.Set(facingDirection.x, 0f, facingDirection.z);
-        playerRB.AddForce(facingDirection * speed * playerInput.Vertical);
     }
 
     void Jump()
     {
+        print("Jump!");
         playerRB.AddForce(Vector3.up * jumpForce);
     }
 
     private bool OnGround()
     {
-        return Physics.Raycast(transform.position + new Vector3(0, .1f, 0), Vector3.down, .4f);
+        return Physics.Raycast(feet.transform.position, Vector3.down, .6f);
     }
 
 
