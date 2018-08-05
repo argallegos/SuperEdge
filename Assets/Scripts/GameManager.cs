@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-
     public GameObject player;
 
-    Vector3 respawnPoint;
+    public Camera playerCam;
+
+    Transform respawnPoint;
 
     public float fallDeathPoint;
 
 	void Start () {
-        respawnPoint = player.transform.position;
+        respawnPoint = player.transform;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
-        if (player.transform.position.y < fallDeathPoint)
-            player.transform.position = respawnPoint;
+        if (player.transform.position.y < fallDeathPoint) Respawn();    
 		
 	}
+
+    void Respawn()
+    {
+        player.transform.position = respawnPoint.position;
+        player.transform.rotation = respawnPoint.rotation;
+    }
+
+
 }

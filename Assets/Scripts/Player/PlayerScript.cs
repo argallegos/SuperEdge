@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour {
         public Vector2 Sensitivity;
     }
 
-    public float speed, jumpForce;
+    public float speed, moveSpeed, sprintSpeed, jumpForce;
     public GameObject playerMesh, feet;
     public Vector2 direction;
     public Vector3 aimOffset;
@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour {
     public Vector3 facingDirection;
     public Vector3 inputs = Vector3.zero;
     [HideInInspector]
-    public bool inAir;
+    public bool inAir, sprinting = false;
     [HideInInspector]
     public float pInputVertical, pInputHorizontal;
 
@@ -46,6 +46,7 @@ public class PlayerScript : MonoBehaviour {
         playerRB.velocity = Vector3.zero;
         playerRB.angularVelocity = Vector3.zero;
         facingDirection = mainCam.transform.forward;
+        Sprint();
     }
 	
 	void Update () {
@@ -59,6 +60,8 @@ public class PlayerScript : MonoBehaviour {
         inputs.z = playerInput.Vertical;
 
         if (playerInput.jump && OnGround()) Jump();
+        if ((playerInput.sprint && !sprinting) || (!playerInput.sprint && sprinting)) Sprint();
+
 
         Look();
 
@@ -87,8 +90,23 @@ public class PlayerScript : MonoBehaviour {
 
     void Jump()
     {
-        print("Jump!");
         playerRB.AddForce(Vector3.up * jumpForce);
+    }
+
+    void Sprint()
+    {
+        if (!sprinting)
+        {
+            sprinting = true;
+            speed = sprintSpeed;
+            
+        }
+        else
+        {
+            sprinting = false;
+            speed = moveSpeed;
+
+        }
     }
 
     private bool OnGround()
