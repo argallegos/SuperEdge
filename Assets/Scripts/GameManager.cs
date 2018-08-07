@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject player;
+    public GameObject player, spawnPoint;
 
     public Camera playerCam;
 
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     public float fallDeathPoint;
 
 	void Start () {
-        respawnPoint = player.transform;
+        respawnPoint = spawnPoint.transform;
 	}
 	
 	void Update () {
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
 
     void Respawn()
     {
+        print("Respawn!");
         player.transform.position = respawnPoint.position;
         player.transform.rotation = respawnPoint.rotation;
     }
