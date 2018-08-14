@@ -4,29 +4,67 @@ using UnityEngine;
 
 public class GripEdge : MonoBehaviour {
 
-    public GameObject gripPointLow, gripPointHigh;
     InputController playerInput;
+    PlayerScript playerScript;
+
+    [HideInInspector]
+    public bool hanging;
+
+    public float jumpUpForce, hangHeight, hangOffset;
+
+    [HideInInspector]
+    public Vector3 hangPos;
 
     void Start () {
-		
+        playerScript = GetComponent<PlayerScript>();
+        hanging = false;
 	}
 	
 	void Update () {
-		
+		if (hanging)
+        {
+            if (playerScript.playerInput.jump)
+            {
+                StopHang();
+                playerScript.playerRB.AddForce(Vector3.up * jumpUpForce);
+            }
+
+        }
+
 	}
 
     public void Hang ()
     {
+        playerScript.transform.position.Set(hangPos.x, hangPos.y-hangOffset, hangPos.z);
+        // playerScript.playerRB.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        playerScript.playerRB.velocity = Vector3.zero;
+        playerScript.playerRB.useGravity = false;
+        
 
+
+        hanging = true;
+        print("hanging");
+        print(hangPos);
     }
+
+    public void StopHang()
+    {
+        //playerScript.playerRB.constraints = RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationZ;
+        hanging = false;
+        playerScript.playerRB.useGravity = true;
+        print("not hanging");
+    }
+
 
     public void Lift()
     {
 
     }
 
-    public void JumpAway ()
+    public void Drop ()
     {
 
     }
+
+
 }

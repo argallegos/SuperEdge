@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour {
     [HideInInspector]
     public float pInputVertical, pInputHorizontal;
 
-    Rigidbody playerRB;
+    public Rigidbody playerRB;
 
     public Camera mainCam;
 
@@ -34,18 +34,21 @@ public class PlayerScript : MonoBehaviour {
 
     [SerializeField] MouseInput MouseControl;
 
-    InputController playerInput;
+    public InputController playerInput;
+    public WallClimb wallClimb;
     Vector2 mouseInput;
 
 
     void Awake () {
         playerInput = GetComponent<InputController>();
+        wallClimb = GetComponent<WallClimb>();
 
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
         playerRB.velocity = Vector3.zero;
         playerRB.angularVelocity = Vector3.zero;
         facingDirection = mainCam.transform.forward;
+        //playerRB.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         Sprint();
     }
 	
@@ -69,7 +72,8 @@ public class PlayerScript : MonoBehaviour {
     private void FixedUpdate()
     {
         direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
-        if (inputs != Vector3.zero) Move(direction);
+        if (inputs != Vector3.zero && !wallClimb.climbing) Move(direction);
+        //STOP ROTATION IF NO MOUSE INPUT
 
     }
 
@@ -88,7 +92,7 @@ public class PlayerScript : MonoBehaviour {
 
     }
 
-    void Jump()
+    public void Jump()
     {
         playerRB.AddForce(Vector3.up * jumpForce);
     }
