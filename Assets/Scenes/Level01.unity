@@ -2388,6 +2388,7 @@ MonoBehaviour:
   facingDirection: {x: 0, y: 0, z: 0}
   inputs: {x: 0, y: 0, z: 0}
   inAir: 0
+  falling: 0
   sprinting: 0
   pInputVertical: 0
   pInputHorizontal: 0
@@ -2399,6 +2400,8 @@ MonoBehaviour:
     Sensitivity: {x: 2, y: 2}
   playerInput: {fileID: 0}
   wallClimb: {fileID: 0}
+  meshSwitch: {fileID: 0}
+  mesh: {fileID: 805265991}
 --- !u!114 &762618623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,6 +2716,7 @@ GameObject:
   - component: {fileID: 805265992}
   - component: {fileID: 805265994}
   - component: {fileID: 805265993}
+  - component: {fileID: 805265995}
   m_Layer: 0
   m_Name: PlayerMesh
   m_TagString: Untagged
@@ -2775,6 +2779,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 805265991}
   m_Mesh: {fileID: 4300000, guid: 5799d0bd4f52d664bbf6204930061513, type: 3}
+--- !u!114 &805265995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 805265991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f82c5836cfa554f9d0527167a989c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fall: {fileID: 4300000, guid: 0d683150d5a24c244a16aba59443bb2c, type: 3}
+  idle: {fileID: 4300000, guid: 5799d0bd4f52d664bbf6204930061513, type: 3}
+  run: {fileID: 4300000, guid: 0c45b9fd83c9c4d4d868a8694e85aba9, type: 3}
+  runJump: {fileID: 4300000, guid: a92990b63ac269046b3ca93266cd4d97, type: 3}
+  sprint: {fileID: 4300000, guid: a8332a2f0c235554dbd56fa31bc58fe4, type: 3}
+  standJump: {fileID: 4300000, guid: b7b7f141f7342764a9194b842c4d68bc, type: 3}
+  climb: {fileID: 4300000, guid: d6f47c0f4bb82354a89e92709f64b351, type: 3}
+  wallDrop: {fileID: 4300000, guid: 50bf866bd7e73ce47903bd234a2874dc, type: 3}
+  wallHang: {fileID: 4300000, guid: 49f3cfbf2902e794f99046d3457a376a, type: 3}
+  wallJump: {fileID: 4300000, guid: 5df3c11c5a608c840ae4c5284e86eeb0, type: 3}
 --- !u!1 &813341405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,7 +3570,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: d6140b4080d6f4141a147aaadea1635b,
     type: 3}
   m_PrefabInternal: {fileID: 654305365}
---- !u!64 &1046384066
+--- !u!64 &1046384069
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5280,7 +5305,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: d6140b4080d6f4141a147aaadea1635b,
     type: 3}
   m_PrefabInternal: {fileID: 654305365}
---- !u!64 &1678189458
+--- !u!64 &1678189461
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

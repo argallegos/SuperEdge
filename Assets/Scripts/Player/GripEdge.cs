@@ -39,7 +39,7 @@ public class GripEdge : MonoBehaviour {
         // playerScript.playerRB.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         playerScript.playerRB.velocity = Vector3.zero;
         playerScript.playerRB.useGravity = false;
-        
+        playerScript.meshSwitch.SwitchMesh(playerScript.meshSwitch.wallHang);
 
 
         hanging = true;
@@ -53,6 +53,7 @@ public class GripEdge : MonoBehaviour {
         hanging = false;
         playerScript.playerRB.useGravity = true;
         print("not hanging");
+        playerScript.meshSwitch.SwitchMesh(playerScript.meshSwitch.wallJump);
     }
 
 

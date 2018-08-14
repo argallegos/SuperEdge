@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour {
     public Vector3 facingDirection;
     public Vector3 inputs = Vector3.zero;
     [HideInInspector]
-    public bool inAir, sprinting = false;
+    public bool inAir, falling, sprinting = false;
     [HideInInspector]
     public float pInputVertical, pInputHorizontal;
 
@@ -36,19 +36,23 @@ public class PlayerScript : MonoBehaviour {
 
     public InputController playerInput;
     public WallClimb wallClimb;
+    public MeshSwitchy meshSwitch;
+    public GameObject mesh;
     Vector2 mouseInput;
 
 
     void Awake () {
         playerInput = GetComponent<InputController>();
         wallClimb = GetComponent<WallClimb>();
+        meshSwitch = mesh.GetComponent<MeshSwitchy>();
 
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
         playerRB.velocity = Vector3.zero;
         playerRB.angularVelocity = Vector3.zero;
         facingDirection = mainCam.transform.forward;
-        //playerRB.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        playerRB.freezeRotation = true;
+        falling = false;
         Sprint();
     }
 	
@@ -63,9 +67,20 @@ public class PlayerScript : MonoBehaviour {
         inputs.z = playerInput.Vertical;
 
         if (playerInput.jump && OnGround()) Jump();
+
+        if (!OnGround())
+        {
+            Flying();
+            inAir = true;
+        }
+        if (inAir && OnGround())
+        {
+            inAir = false;
+            falling = false;
+            meshSwitch.SwitchMesh(meshSwitch.run);
+        }
+
         if ((playerInput.sprint && !sprinting) || (!playerInput.sprint && sprinting)) Sprint();
-
-
         Look();
 
     }
@@ -73,7 +88,6 @@ public class PlayerScript : MonoBehaviour {
     {
         direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
         if (inputs != Vector3.zero && !wallClimb.climbing) Move(direction);
-        //STOP ROTATION IF NO MOUSE INPUT
 
     }
 
@@ -83,18 +97,22 @@ public class PlayerScript : MonoBehaviour {
         mouseInput.y = Mathf.Lerp(mouseInput.y, playerInput.MouseInput.y, 1f / MouseControl.Damping.y);
 
         transform.Rotate(Vector3.up * mouseInput.x * MouseControl.Sensitivity.x);
+        //transform.Rotate(Vector3.right * Time.deltaTime);
 
     }
 
     public void Move(Vector2 direction)
     {
         transform.position += transform.forward * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
+        //meshSwitch.SwitchMesh(meshSwitch.run);
 
     }
 
     public void Jump()
     {
         playerRB.AddForce(Vector3.up * jumpForce);
+        inAir = true;
+        meshSwitch.SwitchMesh(meshSwitch.runJump);
     }
 
     void Sprint()
@@ -103,12 +121,29 @@ public class PlayerScript : MonoBehaviour {
         {
             sprinting = true;
             speed = sprintSpeed;
-            
+            meshSwitch.SwitchMesh(meshSwitch.sprint);
+
         }
         else
         {
             sprinting = false;
             speed = moveSpeed;
+            meshSwitch.SwitchMesh(meshSwitch.run);
+
+        }
+    }
+    void Flying()
+    {
+        if (!falling && playerRB.velocity.y < 0f)
+        {
+            falling = true;
+            meshSwitch.SwitchMesh(meshSwitch.fall);
+
+        }
+        //if (falling &&)
+        else
+        {
+            
 
         }
     }
