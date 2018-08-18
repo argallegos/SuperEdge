@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour {
     [HideInInspector]
     public bool inAir, falling, sprinting = false;
     [HideInInspector]
-    public float pInputVertical, pInputHorizontal;
+    public float pInputVertical, pInputHorizontal, camY;
 
     public Rigidbody playerRB;
 
@@ -97,6 +97,8 @@ public class PlayerScript : MonoBehaviour {
         mouseInput.y = Mathf.Lerp(mouseInput.y, playerInput.MouseInput.y, 1f / MouseControl.Damping.y);
 
         transform.Rotate(Vector3.up * mouseInput.x * MouseControl.Sensitivity.x);
+        camY = mouseInput.y * MouseControl.Sensitivity.y * -3f;
+        //print("camY = " + camY);
         //transform.Rotate(Vector3.right * Time.deltaTime);
 
     }

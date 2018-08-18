@@ -12,15 +12,19 @@ ModelImporter:
     400004: Pipe_End_2
     400006: //RootNode
     2100000: lambert1
+    2100002: lambert2
     2300000: Pipe_Body
     2300002: Pipe_End_1
     2300004: Pipe_End_2
+    2300006: //RootNode
     3300000: Pipe_Body
     3300002: Pipe_End_1
     3300004: Pipe_End_2
+    3300006: //RootNode
     4300000: Pipe_End_2
     4300002: Pipe_End_1
     4300004: Pipe_Body
+    4300006: Pipe_Straight
   externalObjects: {}
   materials:
     importMaterials: 1

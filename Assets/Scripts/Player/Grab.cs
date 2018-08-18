@@ -6,10 +6,12 @@ public class Grab : MonoBehaviour {
 
     public GameObject player;
     GripEdge gripScript;
+    WallClimb climbScript;
 
     void Start()
     {
         gripScript = player.GetComponent<GripEdge>();
+        climbScript = player.GetComponent<WallClimb>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,6 +23,10 @@ public class Grab : MonoBehaviour {
             gripScript.hanging = true;
             gripScript.hangPos.Set(player.transform.position.x, other.transform.position.y, player.transform.position.z);
         }
+        else if (other.CompareTag("Wall"))
+        {
+            climbScript.Climb();
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -28,6 +34,11 @@ public class Grab : MonoBehaviour {
         if (other.CompareTag("Edge"))
         {
             gripScript.StopHang();
+        }
+        else if (other.CompareTag("Wall"))
+        {
+            print("not climbing");
+            climbScript.StopClimb();
         }
     }
 

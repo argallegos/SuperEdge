@@ -32,8 +32,6 @@ public class WallClimb : MonoBehaviour {
             climbing = true;
             print("climbing");
         }
-            
-
     }
 
     public void StopClimb()

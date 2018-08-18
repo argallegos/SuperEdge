@@ -6,16 +6,36 @@ ModelImporter:
     100000: //RootNode
     100002: Building_Body
     100004: Building_Roof
+    100006: Building_Body_Main
+    100008: Building_Body_Trim
+    100010: Building_Roof_Trim
+    100012: Building_RoofCenter
     400000: //RootNode
     400002: Building_Body
     400004: Building_Roof
+    400006: Building_Body_Main
+    400008: Building_Body_Trim
+    400010: Building_Roof_Trim
+    400012: Building_RoofCenter
     2100000: lambert1
     2300000: Building_Body
     2300002: Building_Roof
+    2300004: Building_Body_Main
+    2300006: Building_Body_Trim
+    2300008: Building_Roof_Trim
+    2300010: Building_RoofCenter
     3300000: Building_Body
     3300002: Building_Roof
+    3300004: Building_Body_Main
+    3300006: Building_Body_Trim
+    3300008: Building_Roof_Trim
+    3300010: Building_RoofCenter
     4300000: Building_Body
     4300002: Building_Roof
+    4300004: Building_Body_Main
+    4300006: Building_RoofCenter
+    4300008: Building_Roof_Trim
+    4300010: Building_Body_Trim
   externalObjects: {}
   materials:
     importMaterials: 1

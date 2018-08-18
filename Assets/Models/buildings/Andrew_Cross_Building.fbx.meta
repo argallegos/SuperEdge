@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: af5d6c30ca76522458485676aee11d13
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cross_Body
+    100004: Cross_Bottem_Sleeve
+    100006: Cross_Building_Center
+    100008: Cross_Building_Cross_Pieces
+    100010: Cross_Center_Decor_1
+    100012: Cross_Center_Decor_1 1
+    100014: Cross_Center_Decor_1 2
+    100016: Cross_Center_Decor_1 3
+    100018: Cross_Center_Top_Trim
+    100020: Cross_Decor
+    100022: Cross_Decor_1
+    100024: Cross_Decor_1_Light
+    100026: Cross_Decor_1_Light 1
+    100028: Cross_Decor_1_Light 2
+    100030: Cross_Decor_1_Light 3
+    100032: Cross_Decor_2
+    100034: Cross_Decor_3
+    100036: Cross_Decor_4
+    100038: Cross_Piece_Decor
+    100040: Cross_Piece_Decor 1
+    100042: Cross_Piece_Decor 2
+    100044: Cross_Piece_Decor 3
+    100046: Cross_Piece_Top_Tim_1
+    100048: Cross_Piece_Top_Tim_1 1
+    100050: Cross_Piece_Top_Tim_1 2
+    100052: Cross_Piece_Top_Tim_1 3
+    100054: Cross_Piece_Trim_Decor
+    100056: Cross_Piece_Trim_Decor_1
+    100058: Cross_Piece_Trim_Decor_2
+    100060: Cross_Piece_Trim_Decor_3
+    100062: Cross_Piece_Trim_Decor_4
+    100064: Decor_1_Trim
+    100066: Decor_1_Trim 1
+    100068: Decor_1_Trim 2
+    100070: Decor_1_Trim 3
+    400000: //RootNode
+    400002: Cross_Body
+    400004: Cross_Bottem_Sleeve
+    400006: Cross_Building_Center
+    400008: Cross_Building_Cross_Pieces
+    400010: Cross_Center_Decor_1
+    400012: Cross_Center_Decor_1 1
+    400014: Cross_Center_Decor_1 2
+    400016: Cross_Center_Decor_1 3
+    400018: Cross_Center_Top_Trim
+    400020: Cross_Decor
+    400022: Cross_Decor_1
+    400024: Cross_Decor_1_Light
+    400026: Cross_Decor_1_Light 1
+    400028: Cross_Decor_1_Light 2
+    400030: Cross_Decor_1_Light 3
+    400032: Cross_Decor_2
+    400034: Cross_Decor_3
+    400036: Cross_Decor_4
+    400038: Cross_Piece_Decor
+    400040: Cross_Piece_Decor 1
+    400042: Cross_Piece_Decor 2
+    400044: Cross_Piece_Decor 3
+    400046: Cross_Piece_Top_Tim_1
+    400048: Cross_Piece_Top_Tim_1 1
+    400050: Cross_Piece_Top_Tim_1 2
+    400052: Cross_Piece_Top_Tim_1 3
+    400054: Cross_Piece_Trim_Decor
+    400056: Cross_Piece_Trim_Decor_1
+    400058: Cross_Piece_Trim_Decor_2
+    400060: Cross_Piece_Trim_Decor_3
+    400062: Cross_Piece_Trim_Decor_4
+    400064: Decor_1_Trim
+    400066: Decor_1_Trim 1
+    400068: Decor_1_Trim 2
+    400070: Decor_1_Trim 3
+    2100000: lambert1
+    2300000: Cross_Bottem_Sleeve
+    2300002: Cross_Building_Center
+    2300004: Cross_Building_Cross_Pieces
+    2300006: Cross_Center_Decor_1
+    2300008: Cross_Center_Decor_1 1
+    2300010: Cross_Center_Decor_1 2
+    2300012: Cross_Center_Decor_1 3
+    2300014: Cross_Center_Top_Trim
+    2300016: Cross_Decor_1_Light
+    2300018: Cross_Decor_1_Light 1
+    2300020: Cross_Decor_1_Light 2
+    2300022: Cross_Decor_1_Light 3
+    2300024: Cross_Piece_Decor
+    2300026: Cross_Piece_Decor 1
+    2300028: Cross_Piece_Decor 2
+    2300030: Cross_Piece_Decor 3
+    2300032: Cross_Piece_Top_Tim_1
+    2300034: Cross_Piece_Top_Tim_1 1
+    2300036: Cross_Piece_Top_Tim_1 2
+    2300038: Cross_Piece_Top_Tim_1 3
+    2300040: Decor_1_Trim
+    2300042: Decor_1_Trim 1
+    2300044: Decor_1_Trim 2
+    2300046: Decor_1_Trim 3
+    3300000: Cross_Bottem_Sleeve
+    3300002: Cross_Building_Center
+    3300004: Cross_Building_Cross_Pieces
+    3300006: Cross_Center_Decor_1
+    3300008: Cross_Center_Decor_1 1
+    3300010: Cross_Center_Decor_1 2
+    3300012: Cross_Center_Decor_1 3
+    3300014: Cross_Center_Top_Trim
+    3300016: Cross_Decor_1_Light
+    3300018: Cross_Decor_1_Light 1
+    3300020: Cross_Decor_1_Light 2
+    3300022: Cross_Decor_1_Light 3
+    3300024: Cross_Piece_Decor
+    3300026: Cross_Piece_Decor 1
+    3300028: Cross_Piece_Decor 2
+    3300030: Cross_Piece_Decor 3
+    3300032: Cross_Piece_Top_Tim_1
+    3300034: Cross_Piece_Top_Tim_1 1
+    3300036: Cross_Piece_Top_Tim_1 2
+    3300038: Cross_Piece_Top_Tim_1 3
+    3300040: Decor_1_Trim
+    3300042: Decor_1_Trim 1
+    3300044: Decor_1_Trim 2
+    3300046: Decor_1_Trim 3
+    4300000: Cross_Building_Center
+    4300002: Cross_Building_Cross_Pieces
+    4300004: Cross_Center_Top_Trim
+    4300006: Cross_Bottem_Sleeve
+    4300008: Cross_Piece_Top_Tim_1
+    4300010: Cross_Piece_Decor
+    4300012: Cross_Piece_Top_Tim_1
+    4300014: Cross_Piece_Decor
+    4300016: Cross_Piece_Top_Tim_1
+    4300018: Cross_Piece_Decor
+    4300020: Cross_Piece_Top_Tim_1
+    4300022: Cross_Piece_Decor
+    4300024: Cross_Center_Decor_1
+    4300026: Decor_1_Trim
+    4300028: Cross_Decor_1_Light
+    4300030: Cross_Center_Decor_1
+    4300032: Decor_1_Trim
+    4300034: Cross_Decor_1_Light
+    4300036: Cross_Center_Decor_1
+    4300038: Decor_1_Trim
+    4300040: Cross_Decor_1_Light
+    4300042: Cross_Center_Decor_1
+    4300044: Decor_1_Trim
+    4300046: Cross_Decor_1_Light
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
