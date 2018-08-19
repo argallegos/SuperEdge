@@ -80,7 +80,7 @@ public class PlayerScript : MonoBehaviour {
             meshSwitch.SwitchMesh(meshSwitch.run);
         }
 
-        if ((playerInput.sprint && !sprinting) || (!playerInput.sprint && sprinting)) Sprint();
+        if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
         Look();
 
     }
@@ -97,7 +97,8 @@ public class PlayerScript : MonoBehaviour {
         mouseInput.y = Mathf.Lerp(mouseInput.y, playerInput.MouseInput.y, 1f / MouseControl.Damping.y);
 
         transform.Rotate(Vector3.up * mouseInput.x * MouseControl.Sensitivity.x);
-        camY = mouseInput.y * MouseControl.Sensitivity.y * -3f;
+        camY = mouseInput.y * MouseControl.Sensitivity.y;
+        //print(playerInput.MouseInput.y);
         //print("camY = " + camY);
         //transform.Rotate(Vector3.right * Time.deltaTime);
 
@@ -105,7 +106,11 @@ public class PlayerScript : MonoBehaviour {
 
     public void Move(Vector2 direction)
     {
-        transform.position += transform.forward * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
+        if (!wallClimb.climbing)
+        {
+            transform.position += transform.forward * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
+        }
+        else transform.position += transform.up * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
         //meshSwitch.SwitchMesh(meshSwitch.run);
 
     }

@@ -9,7 +9,7 @@ public class InputController : MonoBehaviour {
     [HideInInspector]
     public Vector2 MouseInput;
     [HideInInspector]
-    public bool jump, sprint;
+    public bool jump, shift;
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class InputController : MonoBehaviour {
         Horizontal = Input.GetAxis("Horizontal");
         MouseInput = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         jump = Input.GetKeyDown(KeyCode.Space);
-        sprint = Input.GetKey(KeyCode.LeftShift);
+        shift = Input.GetKey(KeyCode.LeftShift);
 
     }
 

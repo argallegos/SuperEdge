@@ -28,6 +28,10 @@ public class GripEdge : MonoBehaviour {
                 StopHang();
                 playerScript.playerRB.AddForce(Vector3.up * jumpUpForce);
             }
+            if (playerScript.playerInput.shift)
+            {
+                StopHang();
+            }
 
         }
 

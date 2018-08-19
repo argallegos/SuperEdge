@@ -8,16 +8,16 @@ public class Material_Change : MonoBehaviour {
 	Renderer rend;
 	
 	public Color playerColor;
-	[Header "Colors to switch between"]
-	[Tooltip "Initial color"]
+	[Header ("Colors to switch between")]
+	[Tooltip ("Initial color")]
 	public Color color1;
-	[Tooltip "End color"]
+	[Tooltip ("End color")]
 	public Color color2;
 	
-	[Header "Time variables"]
-	[Tooltip "Total duration, kinda this bigger w/ small multiplier for longer time to change"]
+	[Header ("Time variables")]
+	[Tooltip ("Total duration, kinda this bigger w/ small multiplier for longer time to change")]
 	public float time;
-	[Tooltip "Change multiplier, decimals for slower"]
+	[Tooltip ("Change multiplier, decimals for slower")]
 	public float multiplier;
 	
 	void Start(){

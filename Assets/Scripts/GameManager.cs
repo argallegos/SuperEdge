@@ -10,16 +10,18 @@ public class GameManager : MonoBehaviour {
     ThirdPersonCamera cam;
 
     Transform respawnPoint;
+    public Transform debugSpawn;
+    public bool altSpawn;
+
 
     public float fallDeathPoint;
 
     public float restartDelay = 1f;
-    private bool alive = true;
     private bool restartReady = false;
     private float restartCounter = 0f;
 
     void Start () {
-        respawnPoint = spawnPoint.transform;
+        SetSpawn();
         cam = playerCam.GetComponent<ThirdPersonCamera>();
     }
 	
@@ -43,6 +45,13 @@ public class GameManager : MonoBehaviour {
             }
         }
 
+    }
+
+    void SetSpawn()
+    {
+        if (altSpawn) respawnPoint = debugSpawn;
+
+        else respawnPoint = spawnPoint.transform;
     }
 
     void Dying()
