@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: b7de1552f1c057a48b882e19edd63c9a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Joey_01:ARIEL
+    100004: Joey_01:C7
+    100006: Joey_01:CLAV
+    100008: Joey_01:LANK
+    100010: Joey_01:LBHD
+    100012: Joey_01:LBSH
+    100014: Joey_01:LBWT
+    100016: Joey_01:LELB
+    100018: Joey_01:LFHD
+    100020: Joey_01:LFSH
+    100022: Joey_01:LFWT
+    100024: Joey_01:LHEL
+    100026: Joey_01:LHIP
+    100028: Joey_01:LIEL
+    100030: Joey_01:LIHAND
+    100032: Joey_01:LIWR
+    100034: Joey_01:LKNE
+    100036: Joey_01:LKNI
+    100038: Joey_01:LMT1
+    100040: Joey_01:LMT5
+    100042: Joey_01:LMWT
+    100044: Joey_01:LOHAND
+    100046: Joey_01:LOWR
+    100048: Joey_01:LSHN
+    100050: Joey_01:LTOE
+    100052: Joey_01:LUPA
+    100054: Joey_01:LWRE
+    100056: Joey_01:RANK
+    100058: Joey_01:RBHD
+    100060: Joey_01:RBSH
+    100062: Joey_01:RBWT
+    100064: Joey_01:RELB
+    100066: Joey_01:RFHD
+    100068: Joey_01:RFSH
+    100070: Joey_01:RFWT
+    100072: Joey_01:RHEL
+    100074: Joey_01:RHIP
+    100076: Joey_01:RIEL
+    100078: Joey_01:RIHAND
+    100080: Joey_01:RIWR
+    100082: Joey_01:RKNE
+    100084: Joey_01:RKNI
+    100086: Joey_01:RMT1
+    100088: Joey_01:RMT5
+    100090: Joey_01:RMWT
+    100092: Joey_01:ROHAND
+    100094: Joey_01:ROWR
+    100096: Joey_01:RSHN
+    100098: Joey_01:RTOE
+    100100: Joey_01:RUPA
+    100102: Joey_01:RWRE
+    100104: Joey_01:Solving
+    100106: Joey_01:Solving:Head
+    100108: Joey_01:Solving:HeadEnd
+    100110: Joey_01:Solving:Hips
+    100112: Joey_01:Solving:L_FingersEnd
+    100114: Joey_01:Solving:LeftArm
+    100116: Joey_01:Solving:LeftFoot
+    100118: Joey_01:Solving:LeftForeArm
+    100120: Joey_01:Solving:LeftHand
+    100122: Joey_01:Solving:LeftHandEnd
+    100124: Joey_01:Solving:LeftHandThumb1
+    100126: Joey_01:Solving:LeftHandThumb2
+    100128: Joey_01:Solving:LeftLeg
+    100130: Joey_01:Solving:LeftShoulder
+    100132: Joey_01:Solving:LeftToeBase
+    100134: Joey_01:Solving:LeftToeBaseEnd
+    100136: Joey_01:Solving:LeftUpLeg
+    100138: Joey_01:Solving:Neck
+    100140: Joey_01:Solving:R_FingersEnd
+    100142: Joey_01:Solving:RightArm
+    100144: Joey_01:Solving:RightFoot
+    100146: Joey_01:Solving:RightForeArm
+    100148: Joey_01:Solving:RightHand
+    100150: Joey_01:Solving:RightHandEnd
+    100152: Joey_01:Solving:RightHandThumb1
+    100154: Joey_01:Solving:RightHandThumb2
+    100156: Joey_01:Solving:RightLeg
+    100158: Joey_01:Solving:RightShoulder
+    100160: Joey_01:Solving:RightToeBase
+    100162: Joey_01:Solving:RightToeBaseEnd
+    100164: Joey_01:Solving:RightUpLeg
+    100166: Joey_01:Solving:Spine
+    100168: Joey_01:Solving:Spine1
+    100170: Joey_01:Solving:Spine2
+    100172: Joey_01:Solving:Spine3
+    100174: Joey_01:STRN
+    100176: Joey_01:T10
+    400000: //RootNode
+    400002: Joey_01:ARIEL
+    400004: Joey_01:C7
+    400006: Joey_01:CLAV
+    400008: Joey_01:LANK
+    400010: Joey_01:LBHD
+    400012: Joey_01:LBSH
+    400014: Joey_01:LBWT
+    400016: Joey_01:LELB
+    400018: Joey_01:LFHD
+    400020: Joey_01:LFSH
+    400022: Joey_01:LFWT
+    400024: Joey_01:LHEL
+    400026: Joey_01:LHIP
+    400028: Joey_01:LIEL
+    400030: Joey_01:LIHAND
+    400032: Joey_01:LIWR
+    400034: Joey_01:LKNE
+    400036: Joey_01:LKNI
+    400038: Joey_01:LMT1
+    400040: Joey_01:LMT5
+    400042: Joey_01:LMWT
+    400044: Joey_01:LOHAND
+    400046: Joey_01:LOWR
+    400048: Joey_01:LSHN
+    400050: Joey_01:LTOE
+    400052: Joey_01:LUPA
+    400054: Joey_01:LWRE
+    400056: Joey_01:RANK
+    400058: Joey_01:RBHD
+    400060: Joey_01:RBSH
+    400062: Joey_01:RBWT
+    400064: Joey_01:RELB
+    400066: Joey_01:RFHD
+    400068: Joey_01:RFSH
+    400070: Joey_01:RFWT
+    400072: Joey_01:RHEL
+    400074: Joey_01:RHIP
+    400076: Joey_01:RIEL
+    400078: Joey_01:RIHAND
+    400080: Joey_01:RIWR
+    400082: Joey_01:RKNE
+    400084: Joey_01:RKNI
+    400086: Joey_01:RMT1
+    400088: Joey_01:RMT5
+    400090: Joey_01:RMWT
+    400092: Joey_01:ROHAND
+    400094: Joey_01:ROWR
+    400096: Joey_01:RSHN
+    400098: Joey_01:RTOE
+    400100: Joey_01:RUPA
+    400102: Joey_01:RWRE
+    400104: Joey_01:Solving
+    400106: Joey_01:Solving:Head
+    400108: Joey_01:Solving:HeadEnd
+    400110: Joey_01:Solving:Hips
+    400112: Joey_01:Solving:L_FingersEnd
+    400114: Joey_01:Solving:LeftArm
+    400116: Joey_01:Solving:LeftFoot
+    400118: Joey_01:Solving:LeftForeArm
+    400120: Joey_01:Solving:LeftHand
+    400122: Joey_01:Solving:LeftHandEnd
+    400124: Joey_01:Solving:LeftHandThumb1
+    400126: Joey_01:Solving:LeftHandThumb2
+    400128: Joey_01:Solving:LeftLeg
+    400130: Joey_01:Solving:LeftShoulder
+    400132: Joey_01:Solving:LeftToeBase
+    400134: Joey_01:Solving:LeftToeBaseEnd
+    400136: Joey_01:Solving:LeftUpLeg
+    400138: Joey_01:Solving:Neck
+    400140: Joey_01:Solving:R_FingersEnd
+    400142: Joey_01:Solving:RightArm
+    400144: Joey_01:Solving:RightFoot
+    400146: Joey_01:Solving:RightForeArm
+    400148: Joey_01:Solving:RightHand
+    400150: Joey_01:Solving:RightHandEnd
+    400152: Joey_01:Solving:RightHandThumb1
+    400154: Joey_01:Solving:RightHandThumb2
+    400156: Joey_01:Solving:RightLeg
+    400158: Joey_01:Solving:RightShoulder
+    400160: Joey_01:Solving:RightToeBase
+    400162: Joey_01:Solving:RightToeBaseEnd
+    400164: Joey_01:Solving:RightUpLeg
+    400166: Joey_01:Solving:Spine
+    400168: Joey_01:Solving:Spine1
+    400170: Joey_01:Solving:Spine2
+    400172: Joey_01:Solving:Spine3
+    400174: Joey_01:STRN
+    400176: Joey_01:T10
+    7400000: Idle_looping_01_x2d
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Idle_looping_01_x2d' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Joey_01:Solving:Spine3' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Joey_01:Solving:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Joey_01:Solving:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Idle_looping_01_char(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:ARIEL
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.026150418, y: 1.7237436, z: -0.9991039}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:C7
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.02757832, y: 1.3791727, z: -1.0937988}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:CLAV
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.018234357, y: 1.391684, z: -0.8838628}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LANK
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.17603257, y: 0.056791343, z: -1.0339859}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LBHD
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.11579739, y: 1.6115632, z: -0.9970437}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LBSH
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.20577051, y: 1.4556613, z: -1.0353823}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LBWT
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.16164234, y: 0.96565217, z: -1.0233133}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LELB
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.4750094, y: 1.398474, z: -0.9910039}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LFHD
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.09692591, y: 1.6709608, z: -0.8878586}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LFSH
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.18336003, y: 1.4311101, z: -0.91617507}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LFWT
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.1592058, y: 0.947279, z: -0.8639546}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LHEL
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.09338285, y: 0.052242287, z: -1.078999}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LHIP
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.1580075, y: 0.64427555, z: -0.8712135}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LIEL
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.4555877, y: 1.3002205, z: -0.9394237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LIHAND
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.774235, y: 1.424122, z: -0.87456274}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LIWR
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.6864009, y: 1.4141513, z: -0.84428525}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LKNE
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.18446584, y: 0.46746144, z: -0.9315624}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LKNI
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.06333318, y: 0.45226482, z: -0.9296671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LMT1
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.09489083, y: 0.020416748, z: -0.87485516}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LMT5
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.15323262, y: 0.03153697, z: -0.8821586}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LMWT
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.19371355, y: 0.9693466, z: -0.9403252}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LOHAND
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.7705424, y: 1.3876578, z: -0.9091623}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LOWR
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.7137281, y: 1.3990436, z: -0.91670394}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LSHN
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.1318651, y: 0.23887795, z: -0.9545997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LTOE
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.122272745, y: 0.026757346, z: -0.84617054}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LUPA
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.35132414, y: 1.4053826, z: -1.0037029}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:LWRE
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.60512716, y: 1.4166583, z: -0.901335}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RANK
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.12038549, y: 0.06606405, z: -1.0901091}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RBHD
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.071352474, y: 1.6117808, z: -0.9996147}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RBSH
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.13836585, y: 1.4633566, z: -1.0521611}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RBWT
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.099891216, y: 0.9658492, z: -1.0422444}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RELB
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.4001323, y: 1.3950344, z: -1.0393883}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RFHD
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.055987112, y: 1.6681917, z: -0.8957701}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RFSH
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.11402313, y: 1.4355813, z: -0.9254988}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RFWT
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.13077405, y: 0.95439863, z: -0.8785878}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RHEL
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.03692079, y: 0.059115194, z: -1.1113347}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RHIP
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.12370815, y: 0.7461023, z: -0.88747436}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RIEL
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.39387435, y: 1.3053998, z: -0.9803904}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RIHAND
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.70991254, y: 1.4535522, z: -0.9133015}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RIWR
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.61195135, y: 1.4139591, z: -0.89078045}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RKNE
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.13160537, y: 0.45689353, z: -0.95329887}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RKNI
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.020256715, y: 0.4434248, z: -0.94272774}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RMT1
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.08183889, y: 0.024232468, z: -0.9288243}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RMT5
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.1423247, y: 0.032500852, z: -0.9263538}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RMWT
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.1499336, y: 0.959713, z: -0.9745808}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:ROHAND
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.69868356, y: 1.4345461, z: -0.95485455}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:ROWR
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.6314292, y: 1.4230586, z: -0.97260463}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RSHN
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.0933156, y: 0.29820558, z: -0.9712236}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RTOE
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.11080255, y: 0.024521805, z: -0.8974477}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RUPA
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.24174517, y: 1.4473072, z: -1.0050602}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:RWRE
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: 0.49664092, y: 1.4349649, z: -0.9624487}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:Hips
+      parentName: Joey_01:Solving
+      position: {x: 0.00040408038, y: 0.9116015, z: -0.000582397}
+      rotation: {x: -0.71464825, y: 0.024754813, z: 0.013206079, w: 0.69892114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftUpLeg
+      parentName: Joey_01:Solving:Hips
+      position: {x: -0.08794545, y: 0, z: -0.025691928}
+      rotation: {x: -0.06318222, y: -0.6922255, z: -0.13508554, w: 0.70610464}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftLeg
+      parentName: Joey_01:Solving:LeftUpLeg
+      position: {x: -0.39525992, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.073978625, w: 0.99725986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftFoot
+      parentName: Joey_01:Solving:LeftLeg
+      position: {x: -0.41377005, y: 0, z: 0}
+      rotation: {x: 0.073993, y: -0.06948543, z: 0.66571665, w: 0.73926866}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftToeBase
+      parentName: Joey_01:Solving:LeftFoot
+      position: {x: -0.20481165, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.1797627, w: 0.98371005}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftToeBaseEnd
+      parentName: Joey_01:Solving:LeftToeBase
+      position: {x: -0.07114688, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightUpLeg
+      parentName: Joey_01:Solving:Hips
+      position: {x: 0.08794545, y: 0, z: -0.025691928}
+      rotation: {x: 0.08062759, y: -0.7477202, z: 0.026058173, w: 0.6585855}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightLeg
+      parentName: Joey_01:Solving:RightUpLeg
+      position: {x: -0.39525992, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.12992577, w: 0.99152374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightFoot
+      parentName: Joey_01:Solving:RightLeg
+      position: {x: -0.41377005, y: 0, z: 0}
+      rotation: {x: -0.08393507, y: 0.105606794, z: 0.6859529, w: 0.715032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightToeBase
+      parentName: Joey_01:Solving:RightFoot
+      position: {x: -0.20481165, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.19010128, w: 0.9817645}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightToeBaseEnd
+      parentName: Joey_01:Solving:RightToeBase
+      position: {x: -0.07114688, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:Spine
+      parentName: Joey_01:Solving:Hips
+      position: {x: -0, y: 0.04625116, z: 0.06937674}
+      rotation: {x: -0.09754467, y: -0.00963565, z: -0.0020630285, w: 0.9951824}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:Spine1
+      parentName: Joey_01:Solving:Spine
+      position: {x: -0, y: 0, z: 0.09250232}
+      rotation: {x: 0.03590856, y: -0.00039946186, z: -0.00025020828, w: 0.99935496}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:Spine2
+      parentName: Joey_01:Solving:Spine1
+      position: {x: -0, y: 0, z: 0.09250232}
+      rotation: {x: 0.05186126, y: -0.003126219, z: -0.012007309, w: 0.99857724}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:Spine3
+      parentName: Joey_01:Solving:Spine2
+      position: {x: -0, y: 0, z: 0.09250232}
+      rotation: {x: 0.0014257609, y: -0.0049023777, z: -0.0015621458, w: 0.99998575}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftShoulder
+      parentName: Joey_01:Solving:Spine3
+      position: {x: -0.029644534, y: -0.049407557, z: 0.16008049}
+      rotation: {x: -0.028305287, y: 0.022659054, z: 0.03921287, w: 0.9985729}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftArm
+      parentName: Joey_01:Solving:LeftShoulder
+      position: {x: -0.14723453, y: 0, z: 0}
+      rotation: {x: -0.05453133, y: 0.010902014, z: -0.006619817, w: 0.9984306}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftForeArm
+      parentName: Joey_01:Solving:LeftArm
+      position: {x: -0.2695801, y: 0, z: 0}
+      rotation: {x: 0.0016606668, y: -0.014501451, z: 0.012437439, w: 0.9998162}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftHand
+      parentName: Joey_01:Solving:LeftForeArm
+      position: {x: -0.22468697, y: 0, z: 0}
+      rotation: {x: -0.2696684, y: -0.0362292, z: -0.20178667, w: 0.94087654}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftHandEnd
+      parentName: Joey_01:Solving:LeftHand
+      position: {x: -0.065168165, y: 0, z: 0}
+      rotation: {x: 0.7071067, y: -0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:L_FingersEnd
+      parentName: Joey_01:Solving:LeftHandEnd
+      position: {x: -0.065168165, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftHandThumb1
+      parentName: Joey_01:Solving:LeftHand
+      position: {x: -0.026067266, y: -0.043445442, z: -0.017378176}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:LeftHandThumb2
+      parentName: Joey_01:Solving:LeftHandThumb1
+      position: {x: -0.065168165, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:Neck
+      parentName: Joey_01:Solving:Spine3
+      position: {x: -0, y: -0.03468837, z: 0.24281858}
+      rotation: {x: 0.07752523, y: 0.011499044, z: -0.024237426, w: 0.9966294}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:Head
+      parentName: Joey_01:Solving:Neck
+      position: {x: -0, y: 0, z: 0.12719068}
+      rotation: {x: -0.10315322, y: -0.016082838, z: -0.0474221, w: 0.9934042}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:HeadEnd
+      parentName: Joey_01:Solving:Head
+      position: {x: -0, y: 0, z: 0.14973812}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightShoulder
+      parentName: Joey_01:Solving:Spine3
+      position: {x: 0.029644534, y: -0.049407557, z: 0.16008049}
+      rotation: {x: 0.024652805, y: 0.9991491, z: -0.006868283, w: 0.03234651}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightArm
+      parentName: Joey_01:Solving:RightShoulder
+      position: {x: -0.14723453, y: 0, z: 0}
+      rotation: {x: 0.047242746, y: 0.019193199, z: -0.042414147, w: 0.99779797}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightForeArm
+      parentName: Joey_01:Solving:RightArm
+      position: {x: -0.2695801, y: 0, z: 0}
+      rotation: {x: -0.0038805115, y: 0.018365303, z: 0.036997028, w: 0.99913913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightHand
+      parentName: Joey_01:Solving:RightForeArm
+      position: {x: -0.22468697, y: 0, z: 0}
+      rotation: {x: 0.05097491, y: -0.073329315, z: -0.18165442, w: 0.9792988}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightHandEnd
+      parentName: Joey_01:Solving:RightHand
+      position: {x: -0.065168165, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 0, z: -0, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:R_FingersEnd
+      parentName: Joey_01:Solving:RightHandEnd
+      position: {x: -0.065168165, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightHandThumb1
+      parentName: Joey_01:Solving:RightHand
+      position: {x: -0.026067266, y: -0.043445442, z: 0.017378176}
+      rotation: {x: 0.9876721, y: 0.13002947, z: 0.011375968, w: 0.08641026}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:Solving:RightHandThumb2
+      parentName: Joey_01:Solving:RightHandThumb1
+      position: {x: -0.065168165, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:STRN
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.021036983, y: 1.2052156, z: -0.84763294}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joey_01:T10
+      parentName: Idle_looping_01_char(Clone)
+      position: {x: -0.017085072, y: 1.1898816, z: -1.0871876}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
