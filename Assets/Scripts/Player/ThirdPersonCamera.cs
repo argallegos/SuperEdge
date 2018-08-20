@@ -1,66 +1,71 @@
 ﻿using UnityEngine;
 using System.Collections;
-//Alex Gallegos third person camera script
+
 public class ThirdPersonCamera : MonoBehaviour {
 
-    [SerializeField] public Vector3 cameraOffset;
-    public Vector2 downYZ, upYZ;
-    private float camOffsetY, camOffsetZ;
-    [SerializeField] float damping;
-    public GameObject camTarget, camPivot, player;
-    Transform cameraLookTarget;
-    PlayerScript playerScript;
-    public float maxRotY, minRotY;
     public bool cameraMove;
+    [SerializeField] float damping; 
+    public Vector2 downYZ, upYZ;
+    public float maxRotY, minRotY;
+    public GameObject camLookTarget, camFollowTarget, camPivot, player;
+    Transform cameraLookTarget, cameraFollowTarget;
+    PlayerScript playerScript;
 
-    private Quaternion maxRotation;
+    Vector2 startYZ;
 
-    public float rotY;
-
-    public Vector3 offsetRef;
+    float camOffsetY, camOffsetZ;
+    float followPointY, followPointZ;
+    float rotY;
 
     private void Start()
     {
-        cameraLookTarget = camTarget.transform;
+        cameraLookTarget = camLookTarget.transform;
+        cameraFollowTarget = camFollowTarget.transform;
         playerScript = player.GetComponent<PlayerScript>();
-        offsetRef = cameraOffset;
-        cameraMove = true;
         Cursor.lockState = CursorLockMode.Locked;
+        startYZ.Set(cameraFollowTarget.localPosition.y, cameraFollowTarget.localPosition.z);
 
     }
+
     private void FixedUpdate()
     {
         camPivot.transform.Rotate(Vector3.right * -playerScript.camY);
         rotY = camPivot.transform.localEulerAngles.x;
         if (Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) > maxRotY) {
             rotY = maxRotY;
-            print("exceeds max, angle = " + Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) + "max =" + maxRotY);
+            print("exceeds max");
         }
         else if (Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) < minRotY) {
             rotY = minRotY;
             print("exceeds MIN");
         }
+
+
         if (Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) < 0)
         {
-            //camOffsetY = ((cameraOffset.y - upYZ.y) / minRotY) * (minRotY - (Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x))) + (camOffsetY);
-           // print("camOffsetY = " + camOffsetY);
-        }
+            followPointZ = upYZ.y + (1 - (Mathf.Abs(Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) / maxRotY))) * (startYZ.y - upYZ.y);
+            followPointY = upYZ.x + (1 - (Mathf.Abs(Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) / maxRotY))) * (startYZ.x - upYZ.x);
+            cameraFollowTarget.localPosition = new Vector3(cameraFollowTarget.localPosition.x, followPointY, followPointZ);
 
-        
-        //camPivot.transform.localEulerAngles = new Vector3(rotY, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        }
+        if (Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) > 0)
+        {
+            followPointZ = downYZ.y + (1 - (Mathf.Abs(Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) / minRotY))) * (startYZ.y - downYZ.y);
+            followPointY = downYZ.x + (1 - (Mathf.Abs(Mathf.DeltaAngle(0, camPivot.transform.localEulerAngles.x) / maxRotY))) * (startYZ.x - downYZ.x);
+            cameraFollowTarget.localPosition = new Vector3(cameraFollowTarget.localPosition.x, followPointY, followPointZ);
+
+        }
+        camPivot.transform.localEulerAngles = new Vector3(rotY, 0f, 0f);
+
 
     }
+
     void LateUpdate()
     {
 
 
-        Vector3 targetPosition = cameraLookTarget.position
-            + playerScript.transform.forward * cameraOffset.z
-            + playerScript.transform.up * cameraOffset.y
-            + playerScript.transform.right * cameraOffset.x;
-
-        //Vector3 targetPos = new Vector3(targetPosition.x, targetPosition.y + playerScript.camY, targetPosition.z);
-
+        Vector3 targetPosition = cameraFollowTarget.position;
+        
         transform.LookAt(cameraLookTarget.transform);
 
         if (cameraMove) transform.position = Vector3.Lerp(transform.position, targetPosition, damping * Time.deltaTime);
@@ -68,9 +73,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 
     public void CamReset()
     {
-        transform.position = cameraLookTarget.position
-            + playerScript.transform.forward * cameraOffset.z
-            + playerScript.transform.up * cameraOffset.y
-            + playerScript.transform.right * cameraOffset.x;
+        transform.position = cameraFollowTarget.position;
+
     }
 }
