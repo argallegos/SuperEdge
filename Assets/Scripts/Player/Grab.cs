@@ -7,11 +7,13 @@ public class Grab : MonoBehaviour {
     public GameObject player;
     GripEdge gripScript;
     WallClimb climbScript;
+    PlayerScript playerScript;
 
     void Start()
     {
         gripScript = player.GetComponent<GripEdge>();
         climbScript = player.GetComponent<WallClimb>();
+        playerScript = player.GetComponent<PlayerScript>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -26,6 +28,10 @@ public class Grab : MonoBehaviour {
         else if (other.CompareTag("Wall"))
         {
             climbScript.Climb();
+        }
+        if (other.CompareTag("WinCube"))
+        {
+            playerScript.win = true;
         }
     }
 

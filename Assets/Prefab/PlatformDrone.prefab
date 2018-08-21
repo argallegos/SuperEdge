@@ -57,7 +57,7 @@ GameObject:
   m_Layer: 0
   m_Name: pos1
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -156,7 +156,7 @@ GameObject:
   m_Layer: 0
   m_Name: pos2
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -694,6 +694,7 @@ MonoBehaviour:
   pos1: {fileID: 4207530367292046}
   pos2: {fileID: 4512935516584556}
   drone: {fileID: 1332320852196990}
+  target: {fileID: 0}
   moveSpeed: 2
   waitTime: 0.5
 --- !u!198 &198888939941766932
