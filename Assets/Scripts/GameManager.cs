@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour {
 
     public Camera playerCam;
     ThirdPersonCamera cam;
+    PlayerScript playerScript;
 
     Transform respawnPoint;
     public Transform debugSpawn;
@@ -19,10 +21,13 @@ public class GameManager : MonoBehaviour {
     public float restartDelay = 1f;
     private bool restartReady = false;
     private float restartCounter = 0f;
+    public Text winText;
 
     void Start () {
         SetSpawn();
         cam = playerCam.GetComponent<ThirdPersonCamera>();
+        playerScript = player.GetComponent<PlayerScript>();
+
     }
 	
 	void Update () {
@@ -43,6 +48,16 @@ public class GameManager : MonoBehaviour {
                     restartReady = true;
                 }
             }
+        }
+        if (playerScript.win) winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("WinCube"))
+        {
+            winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
         }
 
     }

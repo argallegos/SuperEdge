@@ -40,6 +40,8 @@ public class PlayerScript : MonoBehaviour {
     public GameObject mesh;
     Vector2 mouseInput;
 
+    public bool win = false;
+
 
     void Awake () {
         playerInput = GetComponent<InputController>();
