@@ -87,7 +87,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4537626416522606}
-  - component: {fileID: 64855170089744026}
   m_Layer: 0
   m_Name: pipes1
   m_TagString: Untagged
@@ -209,7 +208,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3c5d00a3d40a4704281d3a292057c224, type: 2}
+  - {fileID: 2100000, guid: 7f30c21eed97f78418d6a388c8e75d44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,7 +243,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3c5d00a3d40a4704281d3a292057c224, type: 2}
+  - {fileID: 2100000, guid: 6a3c0bc2b31d3d34184b88687bce1172, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,7 +278,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3c5d00a3d40a4704281d3a292057c224, type: 2}
+  - {fileID: 2100000, guid: 6a3c0bc2b31d3d34184b88687bce1172, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -314,7 +313,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3c5d00a3d40a4704281d3a292057c224, type: 2}
+  - {fileID: 2100000, guid: 7f30c21eed97f78418d6a388c8e75d44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -368,20 +367,6 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1965919722139668}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 5fd4c53a824bc1844b786ac7977db246, type: 3}
---- !u!64 &64855170089744026
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1831093755407794}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
