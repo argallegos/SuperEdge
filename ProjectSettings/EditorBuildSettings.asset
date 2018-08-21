@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level01.unity
     guid: 54b28cf259126c14d8e17ce26bb9ce97
   - enabled: 0
-    path: Assets/Scenes/Playground.unity
+    path: Assets/Scenes/OldScenes/Playground.unity
     guid: 03166c0496938c243842597be5556a40
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AndrewScene.unity
     guid: deb416915d63ad34e8d9143a5c42a464
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main_Menu.unity
     guid: 558570be32dbd30429c91aebb769907c
   m_configObjects: {}
