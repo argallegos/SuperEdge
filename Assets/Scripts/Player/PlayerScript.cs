@@ -98,9 +98,6 @@ public class PlayerScript : MonoBehaviour {
 
         transform.Rotate(Vector3.up * mouseInput.x * MouseControl.Sensitivity.x);
         camY = mouseInput.y * MouseControl.Sensitivity.y;
-        //print(playerInput.MouseInput.y);
-        //print("camY = " + camY);
-        //transform.Rotate(Vector3.right * Time.deltaTime);
 
     }
 

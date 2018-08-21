@@ -9,6 +9,7 @@ public class DroneControl : MonoBehaviour {
     Vector3 direction;
     Transform destination;
     public GameObject drone;
+   // public Transform target;
     Rigidbody droneRB;
     public float moveSpeed;
 
@@ -42,7 +43,12 @@ public class DroneControl : MonoBehaviour {
 
             }
         }
-	}
+        /*
+        Vector3 targetPostition = new Vector3(target.position.x,
+                                       this.transform.position.y,
+                                       target.position.z);
+        this.transform.LookAt(targetPostition); */
+    }
 
     void SetDestination(Transform dest)
     {
@@ -61,133 +67,3 @@ public class DroneControl : MonoBehaviour {
         move = false;
     }
 }
-/*
-// © 2017 TheFlyingKeyboard and released under MIT License
-// theflyingkeyboard.net
-//Moves object between two points
-public class MoveBetweenTwoPoints : MonoBehaviour
-{
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private GameObject pointA;
-    [SerializeField] private GameObject pointB;
-    [SerializeField] private bool reverseMove = false;
-    [SerializeField] private Transform objectToUse;
-    [SerializeField] private bool moveThisObject = false;
-    private float startTime;
-    private float journeyLength;
-    private float distCovered;
-    private float fracJourney;
-    void Start()
-    {
-        startTime = Time.time;
-        if (moveThisObject)
-        {
-            objectToUse = transform;
-        }
-        journeyLength = Vector3.Distance(pointA.transform.position, pointB.transform.position);
-    }
-    void Update()
-    {
-        distCovered = (Time.time - startTime) * moveSpeed;
-        fracJourney = distCovered / journeyLength;
-        if (reverseMove)
-        {
-            objectToUse.position = Vector3.Lerp(pointB.transform.position, pointA.transform.position, fracJourney);
-        }
-        else
-        {
-            objectToUse.position = Vector3.Lerp(pointA.transform.position, pointB.transform.position, fracJourney);
-        }
-        if ((Vector3.Distance(objectToUse.position, pointB.transform.position) == 0.0f || Vector3.Distance(objectToUse.position, pointA.transform.position) == 0.0f)) //Checks if the object has travelled to one of the points
-        {
-            if (reverseMove)
-            {
-                reverseMove = false;
-            }
-            else
-            {
-                reverseMove = true;
-            }
-            startTime = Time.time;
-        }
-    }
-}
-public Transform pos1, pos2;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private bool reverseMove = false;
-    [SerializeField] private Transform objectToUse;
-    [SerializeField] private bool moveThisObject = false;
-    private float startTime;
-    private float journeyLength;
-    private float distCovered;
-    private float fracJourney;
-
-    public float waitTime;
-    private bool move = false;
-    private float waitCounter = 0f;
-
-    void Start () {
-        startTime = Time.time;
-        if (moveThisObject)
-        {
-            objectToUse = transform;
-        }
-        journeyLength = Vector3.Distance(pos1.position, pos2.position);
-    }
-	
-	void FixedUpdate () {
-
-        if (move)
-        {
-            distCovered = (Time.time - startTime) * moveSpeed;
-            fracJourney = distCovered / journeyLength;
-
-            if (reverseMove)
-            {
-                objectToUse.position = Vector3.Lerp(pos2.position, pos1.position, fracJourney);
-            }
-            else
-            {
-                objectToUse.position = Vector3.Lerp(pos1.position, pos2.position, fracJourney);
-            }
-
-            if ((Vector3.Distance(objectToUse.position, pos2.position) == 0.0f || Vector3.Distance(objectToUse.position, pos1.position) == 0.0f))
-            {
-                if (move) Stopped();
-            }
-        }
-        else
-        {
-            waitCounter += Time.deltaTime;
-            if (waitCounter >= waitTime)
-            {
-                EndWait();
-
-            }
-        }
-
-
-	}
-    void EndWait()
-    {
-        waitCounter = 0f;
-        if (reverseMove)
-        {
-            reverseMove = false;
-        }
-        else
-        {
-            reverseMove = true;
-        }
-        move = true;
-        startTime = Time.time;
-    }
-
-    void Stopped()
-    {
-        move = false;
-
-
-    }
-*/
-
