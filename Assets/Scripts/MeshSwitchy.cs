@@ -8,7 +8,7 @@ public class MeshSwitchy : MonoBehaviour {
     public Mesh fall, idle, run, runJump, sprint, standJump, climb, wallDrop, wallHang, wallJump;
 
     void Start () {
-        GetComponent<MeshFilter>().mesh = idle;
+        //GetComponent<MeshFilter>().mesh = idle;
 
     }
 	
