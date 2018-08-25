@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour {
     private bool restartReady = false;
     private float restartCounter = 0f;
     public Text winText;
-    public bool paused = false;
 
     void Start () {
         SetSpawn();

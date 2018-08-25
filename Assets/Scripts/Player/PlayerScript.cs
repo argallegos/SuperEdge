@@ -41,7 +41,6 @@ public class PlayerScript : MonoBehaviour {
     Vector2 mouseInput;
 
     public bool win = false;
-    public bool paused = false;
 
 
     void Awake () {
@@ -84,7 +83,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
         if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
-        if (!paused) Look();
+        Look();
 
     }
     private void FixedUpdate()

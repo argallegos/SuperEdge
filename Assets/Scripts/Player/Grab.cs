@@ -21,10 +21,9 @@ public class Grab : MonoBehaviour {
         if (other.CompareTag("Edge"))
         {
             print("Grabbing!");
-            gripScript.hangPos = new Vector3(player.transform.position.x, other.transform.position.y, player.transform.position.z);
             gripScript.Hang();
             gripScript.hanging = true;
-
+            gripScript.hangPos.Set(player.transform.position.x, other.transform.position.y, player.transform.position.z);
         }
         else if (other.CompareTag("Wall"))
         {
