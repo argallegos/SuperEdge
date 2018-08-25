@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public float speed, moveSpeed, sprintSpeed, jumpForce;
-    public GameObject playerMesh, feet;
+    public GameObject feet;
     public Vector2 direction;
     public Vector3 aimOffset;
 
@@ -36,8 +36,8 @@ public class PlayerScript : MonoBehaviour {
 
     public InputController playerInput;
     public WallClimb wallClimb;
-    public MeshSwitchy meshSwitch;
-    public GameObject mesh;
+    //public MeshSwitchy meshSwitch;
+    //public GameObject mesh;
     Vector2 mouseInput;
 
     public bool win = false;
@@ -46,7 +46,7 @@ public class PlayerScript : MonoBehaviour {
     void Awake () {
         playerInput = GetComponent<InputController>();
         wallClimb = GetComponent<WallClimb>();
-        meshSwitch = mesh.GetComponent<MeshSwitchy>();
+        //meshSwitch = mesh.GetComponent<MeshSwitchy>();
 
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
