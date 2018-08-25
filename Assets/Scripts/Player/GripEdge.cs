@@ -39,12 +39,12 @@ public class GripEdge : MonoBehaviour {
 
     public void Hang ()
     {
-        playerScript.transform.position.Set(hangPos.x, hangPos.y-hangOffset, hangPos.z);
+        playerScript.transform.position = new Vector3(hangPos.x, hangPos.y-hangOffset, hangPos.z);
         // playerScript.playerRB.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         playerScript.playerRB.velocity = Vector3.zero;
         playerScript.playerRB.useGravity = false;
-        //playerScript.meshSwitch.SwitchMesh(playerScript.meshSwitch.wallHang);
-
+        playerScript.meshSwitch.SwitchMesh(playerScript.meshSwitch.wallHang);
+        Debug.Log(hangPos + " " + hangOffset);
 
         hanging = true;
         print("hanging");
@@ -57,7 +57,7 @@ public class GripEdge : MonoBehaviour {
         hanging = false;
         playerScript.playerRB.useGravity = true;
         print("not hanging");
-        //playerScript.meshSwitch.SwitchMesh(playerScript.meshSwitch.wallJump);
+        playerScript.meshSwitch.SwitchMesh(playerScript.meshSwitch.wallJump);
     }
 
 
