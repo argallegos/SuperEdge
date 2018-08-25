@@ -9,6 +9,7 @@ TagManager:
   - Feet
   - Wall
   - WinCube
+  - AddSpeed
   layers:
   - Default
   - TransparentFX
