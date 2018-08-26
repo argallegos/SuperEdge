@@ -14,9 +14,13 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public float speed, moveSpeed, sprintSpeed, jumpForce;
+<<<<<<< HEAD
     public GameObject playerMesh, feet;
     public GameObject animator;
 
+=======
+    public GameObject feet;
+>>>>>>> f3cba771bd8c8758d24c1560a81bd1b6320c73f9
     public Vector2 direction;
     public Vector3 aimOffset;
 
@@ -39,8 +43,8 @@ public class PlayerScript : MonoBehaviour {
 
     public InputController playerInput;
     public WallClimb wallClimb;
-    public MeshSwitchy meshSwitch;
-    public GameObject mesh;
+   // public MeshSwitchy meshSwitch;
+    //public GameObject mesh;
     Vector2 mouseInput;
 
     public bool win = false;
@@ -50,8 +54,12 @@ public class PlayerScript : MonoBehaviour {
     void Awake () {
         playerInput = GetComponent<InputController>();
         wallClimb = GetComponent<WallClimb>();
+<<<<<<< HEAD
         meshSwitch = mesh.GetComponent<MeshSwitchy>();
         anim = animator.GetComponent<Animator>();
+=======
+        //meshSwitch = mesh.GetComponent<MeshSwitchy>();
+>>>>>>> f3cba771bd8c8758d24c1560a81bd1b6320c73f9
 
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
@@ -84,7 +92,7 @@ public class PlayerScript : MonoBehaviour {
         {
             inAir = false;
             falling = false;
-            meshSwitch.SwitchMesh(meshSwitch.run);
+            //meshSwitch.SwitchMesh(meshSwitch.run);
         }
 
         if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
@@ -123,7 +131,7 @@ public class PlayerScript : MonoBehaviour {
     {
         playerRB.AddForce(Vector3.up * jumpForce);
         inAir = true;
-        meshSwitch.SwitchMesh(meshSwitch.runJump);
+        //meshSwitch.SwitchMesh(meshSwitch.runJump);
     }
 
     void Sprint()
@@ -132,15 +140,19 @@ public class PlayerScript : MonoBehaviour {
         {
             sprinting = true;
             speed = sprintSpeed;
-            meshSwitch.SwitchMesh(meshSwitch.sprint);
+            //meshSwitch.SwitchMesh(meshSwitch.sprint);
 
         }
         else
         {
             sprinting = false;
             speed = moveSpeed;
+<<<<<<< HEAD
             meshSwitch.SwitchMesh(meshSwitch.run);
             setRun();
+=======
+            //meshSwitch.SwitchMesh(meshSwitch.run);
+>>>>>>> f3cba771bd8c8758d24c1560a81bd1b6320c73f9
 
         }
     }
@@ -149,7 +161,7 @@ public class PlayerScript : MonoBehaviour {
         if (!falling && playerRB.velocity.y < 0f)
         {
             falling = true;
-            meshSwitch.SwitchMesh(meshSwitch.fall);
+            //meshSwitch.SwitchMesh(meshSwitch.fall);
 
         }
         //if (falling &&)
