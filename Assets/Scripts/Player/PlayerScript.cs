@@ -95,6 +95,12 @@ public class PlayerScript : MonoBehaviour {
         if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
         if (!paused) Look();
 
+        if (!falling && !sprinting)
+            if (inputs == Vector3.zero)
+            {
+                anim.SetInteger("AnimState", 0);
+            }
+
     }
     private void FixedUpdate()
     {
@@ -128,6 +134,7 @@ public class PlayerScript : MonoBehaviour {
     {
         playerRB.AddForce(Vector3.up * jumpForce);
         inAir = true;
+            anim.SetInteger("AnimState", 2);
         //meshSwitch.SwitchMesh(meshSwitch.runJump);
     }
 
@@ -146,7 +153,7 @@ public class PlayerScript : MonoBehaviour {
             speed = moveSpeed;
 
             //meshSwitch.SwitchMesh(meshSwitch.run);
-            setRun();
+            anim.SetInteger("AnimState", 1);
 
             //meshSwitch.SwitchMesh(meshSwitch.run);
 
@@ -172,11 +179,6 @@ public class PlayerScript : MonoBehaviour {
     private bool OnGround()
     {
         return Physics.Raycast(feet.transform.position, Vector3.down, .6f);
-    }
-
-    private void setRun()
-    {
-        anim.SetBool("isRunning", true);
     }
 
 
