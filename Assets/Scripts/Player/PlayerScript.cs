@@ -15,6 +15,8 @@ public class PlayerScript : MonoBehaviour {
 
     public float speed, moveSpeed, sprintSpeed, jumpForce;
     public GameObject playerMesh, feet;
+    public GameObject animator;
+
     public Vector2 direction;
     public Vector3 aimOffset;
 
@@ -27,6 +29,7 @@ public class PlayerScript : MonoBehaviour {
     public float pInputVertical, pInputHorizontal, camY;
 
     public Rigidbody playerRB;
+    public Animator anim;
 
     public Camera mainCam;
 
@@ -48,6 +51,7 @@ public class PlayerScript : MonoBehaviour {
         playerInput = GetComponent<InputController>();
         wallClimb = GetComponent<WallClimb>();
         meshSwitch = mesh.GetComponent<MeshSwitchy>();
+        anim = animator.GetComponent<Animator>();
 
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
@@ -136,6 +140,7 @@ public class PlayerScript : MonoBehaviour {
             sprinting = false;
             speed = moveSpeed;
             meshSwitch.SwitchMesh(meshSwitch.run);
+            setRun();
 
         }
     }
@@ -158,6 +163,11 @@ public class PlayerScript : MonoBehaviour {
     private bool OnGround()
     {
         return Physics.Raycast(feet.transform.position, Vector3.down, .6f);
+    }
+
+    private void setRun()
+    {
+        anim.SetBool("isRunning", true);
     }
 
 
