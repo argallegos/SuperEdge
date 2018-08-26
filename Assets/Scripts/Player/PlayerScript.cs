@@ -14,13 +14,10 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public float speed, moveSpeed, sprintSpeed, jumpForce;
-<<<<<<< HEAD
+
     public GameObject playerMesh, feet;
     public GameObject animator;
 
-=======
-    public GameObject feet;
->>>>>>> f3cba771bd8c8758d24c1560a81bd1b6320c73f9
     public Vector2 direction;
     public Vector3 aimOffset;
 
@@ -54,12 +51,12 @@ public class PlayerScript : MonoBehaviour {
     void Awake () {
         playerInput = GetComponent<InputController>();
         wallClimb = GetComponent<WallClimb>();
-<<<<<<< HEAD
-        meshSwitch = mesh.GetComponent<MeshSwitchy>();
-        anim = animator.GetComponent<Animator>();
-=======
+
         //meshSwitch = mesh.GetComponent<MeshSwitchy>();
->>>>>>> f3cba771bd8c8758d24c1560a81bd1b6320c73f9
+        anim = animator.GetComponent<Animator>();
+
+        //meshSwitch = mesh.GetComponent<MeshSwitchy>();
+
 
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
@@ -147,12 +144,12 @@ public class PlayerScript : MonoBehaviour {
         {
             sprinting = false;
             speed = moveSpeed;
-<<<<<<< HEAD
-            meshSwitch.SwitchMesh(meshSwitch.run);
-            setRun();
-=======
+
             //meshSwitch.SwitchMesh(meshSwitch.run);
->>>>>>> f3cba771bd8c8758d24c1560a81bd1b6320c73f9
+            setRun();
+
+            //meshSwitch.SwitchMesh(meshSwitch.run);
+
 
         }
     }

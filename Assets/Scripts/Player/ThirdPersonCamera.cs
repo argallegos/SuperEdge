@@ -22,7 +22,7 @@ public class ThirdPersonCamera : MonoBehaviour {
         cameraLookTarget = camLookTarget.transform;
         cameraFollowTarget = camFollowTarget.transform;
         playerScript = player.GetComponent<PlayerScript>();
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         startYZ.Set(cameraFollowTarget.localPosition.y, cameraFollowTarget.localPosition.z);
 
     }
