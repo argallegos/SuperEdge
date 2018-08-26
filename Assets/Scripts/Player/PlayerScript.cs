@@ -100,6 +100,7 @@ public class PlayerScript : MonoBehaviour {
             {
                 anim.SetBool("isIdle", true);
                 anim.SetBool("isRunning", false);
+                anim.SetBool("isDoubleRunning", false);
             }
 
     }
@@ -139,7 +140,8 @@ public class PlayerScript : MonoBehaviour {
         inAir = true;
         //anim.SetInteger("AnimState", 2);
         //meshSwitch.SwitchMesh(meshSwitch.runJump);
-
+        anim.SetBool("isIdle", false);
+        anim.SetBool("isRunning", false);
         anim.SetBool("isJumping", true);
     }
 
@@ -153,6 +155,7 @@ public class PlayerScript : MonoBehaviour {
 
             anim.SetBool("isDoubleRunning", true);
             anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
 
         }
         else
