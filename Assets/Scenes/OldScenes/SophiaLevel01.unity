@@ -3142,6 +3142,7 @@ GameObject:
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
   - component: {fileID: 534669907}
+  - component: {fileID: 534669908}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -3238,6 +3239,18 @@ Skybox:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 3d1e190237e58b4428c01198e6807ffb, type: 2}
+--- !u!114 &534669908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: a4a9a06a3f4fab04ca4467850d8dd918, type: 2}
 --- !u!1 &539535053
 GameObject:
   m_ObjectHideFlags: 0
@@ -4882,6 +4895,7 @@ MonoBehaviour:
   jumpForce: 300
   playerMesh: {fileID: 0}
   feet: {fileID: 1682416372}
+  animator: {fileID: 0}
   direction: {x: 0, y: 0}
   aimOffset: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
@@ -4893,6 +4907,7 @@ MonoBehaviour:
   pInputHorizontal: 0
   camY: 0
   playerRB: {fileID: 0}
+  anim: {fileID: 0}
   mainCam: {fileID: 534669904}
   cameraPivot: {fileID: 0}
   MouseControl:
@@ -4900,8 +4915,6 @@ MonoBehaviour:
     Sensitivity: {x: 2, y: 2}
   playerInput: {fileID: 0}
   wallClimb: {fileID: 0}
-  meshSwitch: {fileID: 0}
-  mesh: {fileID: 805265991}
   win: 0
   paused: 0
 --- !u!114 &762618623
