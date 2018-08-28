@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 //Alex Gallegos main player script
 
-public class PlayerScript : MonoBehaviour {
+public class PlayerScript : MonoBehaviour
+{
 
     [System.Serializable]
     public class MouseInput
@@ -47,7 +48,8 @@ public class PlayerScript : MonoBehaviour {
     public bool paused = false;
 
 
-    void Awake () {
+    void Awake()
+    {
         playerInput = GetComponent<InputController>();
         wallClimb = GetComponent<WallClimb>();
 
@@ -62,15 +64,9 @@ public class PlayerScript : MonoBehaviour {
         falling = false;
         Sprint();
     }
-	
-	void Update () {
-        
-        if (playerInput.shift && inputs != Vector3.zero)
-        {
-            anim.SetBool("isDoubleRunning", true);
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isRunning", false);
-        }
+
+    void Update()
+    {
 
         pInputHorizontal = playerInput.Horizontal;
         direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
@@ -142,12 +138,13 @@ public class PlayerScript : MonoBehaviour {
 
     public void Jump()
     {
-        anim.SetBool("isJumping", true);
         playerRB.AddForce(Vector3.up * jumpForce);
         inAir = true;
         jumping = true;
         //anim.SetInteger("AnimState", 2);
-
+        anim.SetBool("isIdle", false);
+        anim.SetBool("isRunning", false);
+        anim.SetBool("isJumping", true);
     }
 
     void Sprint()
@@ -156,6 +153,10 @@ public class PlayerScript : MonoBehaviour {
         {
             sprinting = true;
             speed = sprintSpeed;
+
+            anim.SetBool("isDoubleRunning", true);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
 
         }
         else
@@ -180,7 +181,7 @@ public class PlayerScript : MonoBehaviour {
         //if (falling &&)
         else
         {
-            
+
 
         }
     }
