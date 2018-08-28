@@ -2868,7 +2868,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 396818855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.034081, y: 0.010265, z: -0.027834}
+  m_LocalPosition: {x: -0.91, y: -1.91, z: -0.57}
   m_LocalScale: {x: 0.9610475, y: 0.96104676, z: 0.9610475}
   m_Children: []
   m_Father: {fileID: 931182195}
@@ -2887,7 +2887,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 2dbdafb7a348fc34eaff96f9c7855dce, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c109a7d21e226914f8fa477dace55274, type: 3}
 --- !u!1 &398194611
 GameObject:
   m_ObjectHideFlags: 0
@@ -5437,9 +5437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc9a9d9e7cdde4fa22fbf53a19eacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   moveSpeed: 5
   sprintSpeed: 15
+  speedySpeed: 30
   jumpForce: 300
   playerMesh: {fileID: 0}
   feet: {fileID: 1682416372}
@@ -5451,6 +5451,7 @@ MonoBehaviour:
   inAir: 0
   falling: 0
   sprinting: 0
+  speed: 0
   pInputVertical: 0
   pInputHorizontal: 0
   camY: 0
@@ -10402,6 +10403,14 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3300004, guid: e122b3a096917e646914e3af879eb6bd, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: e01a4165381e00042a17ea096db7eb92, type: 3}
+    - target: {fileID: 100006, guid: e122b3a096917e646914e3af879eb6bd, type: 3}
+      propertyPath: m_TagString
+      value: Edge
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e122b3a096917e646914e3af879eb6bd, type: 3}
   m_IsPrefabAsset: 0
@@ -12354,6 +12363,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1841851028}
   m_Mesh: {fileID: 4300012, guid: 3d1cf464dc88414469f9bccfbb5cdaa0, type: 3}
+--- !u!1 &1842389347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: e122b3a096917e646914e3af879eb6bd,
+    type: 3}
+  m_PrefabInternal: {fileID: 1571045827}
+--- !u!64 &1842389351
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1842389347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: e01a4165381e00042a17ea096db7eb92, type: 3}
 --- !u!1001 &1845035104
 Prefab:
   m_ObjectHideFlags: 0

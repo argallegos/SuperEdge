@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour {
         public Vector2 Sensitivity;
     }
 
-    public float speed, moveSpeed, sprintSpeed, jumpForce;
+    public float moveSpeed, sprintSpeed, speedySpeed, jumpForce;
 
     public GameObject playerMesh, feet;
     public GameObject animator;
@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour {
     [HideInInspector]
     public bool inAir, falling, sprinting = false;
     [HideInInspector]
-    public float pInputVertical, pInputHorizontal, camY;
+    public float speed, pInputVertical, pInputHorizontal, camY;
 
     public Rigidbody playerRB;
     public Animator anim;
@@ -72,6 +72,7 @@ public class PlayerScript : MonoBehaviour {
         inputs = Vector3.zero;
         inputs.x = playerInput.Horizontal;
         inputs.z = playerInput.Vertical;
+        print(inputs);
 
         if (playerInput.jump && OnGround()) Jump();
 
