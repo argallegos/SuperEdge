@@ -16,6 +16,9 @@ protected static GamePlay_UI_Script _instance = null;
 	public Text TimerText;
 	
 	public GameObject PauseUI;
+
+    public GameObject gameManager;
+    GameManager manager;
 	
 	public int CurrentScore;
 	public Text ScoreText;
@@ -27,8 +30,10 @@ protected static GamePlay_UI_Script _instance = null;
 		} else if (Instance != this){
 			Destroy(this.gameObject);
 		}
-		
-		SecondsPassed = 0.0f;
+
+        manager = gameManager.GetComponent<GameManager>();
+
+        SecondsPassed = 0.0f;
 		MinutesPassed = 0;
 		
 		CurrentScore = 0;
@@ -69,6 +74,7 @@ protected static GamePlay_UI_Script _instance = null;
 		Time.timeScale = 0;
 		Debug.Log("Paused");
 		Cursor.lockState = CursorLockMode.None;
+        manager.paused = true;
 	}
 	
 	public void ResumeGame(){
@@ -76,11 +82,14 @@ protected static GamePlay_UI_Script _instance = null;
 		Debug.Log("UnPaused");
 		Time.timeScale = 1;
 		Cursor.lockState = CursorLockMode.Locked;
+        manager.paused = false;
+
 	}
 	
 	public void GoToMenu(){
 		Debug.Log("Menu");
 		SceneManager.LoadScene("Main_Menu", LoadSceneMode.Single);
+        manager.paused = false;
 	}
 	
 	public void ExitGame(){

@@ -65,14 +65,13 @@ public class PlayerScript : MonoBehaviour {
 	
 	void Update () {
 
-
         pInputHorizontal = playerInput.Horizontal;
         direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
 
         inputs = Vector3.zero;
         inputs.x = playerInput.Horizontal;
+        inputs.y = 0f;
         inputs.z = playerInput.Vertical;
-        print(inputs);
 
         if (playerInput.jump && OnGround()) Jump();
 
@@ -90,6 +89,13 @@ public class PlayerScript : MonoBehaviour {
 
         if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
         if (!paused) Look();
+        /*
+        if (playerInput.Horizontal == 0f && playerInput.Vertical == 0f)
+        {
+            anim.SetBool("isIdle", true);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
+        }*/
 
         if (!falling && !sprinting)
             if (inputs == Vector3.zero)

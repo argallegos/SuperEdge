@@ -432,6 +432,7 @@ MonoBehaviour:
   MinutesPassed: 0
   TimerText: {fileID: 114524951961919408}
   PauseUI: {fileID: 1465537881792262}
+  gameManager: {fileID: 0}
   CurrentScore: 0
   ScoreText: {fileID: 114545830619978496}
 --- !u!114 &114250453174298102
@@ -1302,7 +1303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490, y: 281.5}
+  m_AnchoredPosition: {x: 527.4, y: 281.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224972288013677124
