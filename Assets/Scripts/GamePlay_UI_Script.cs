@@ -68,12 +68,14 @@ protected static GamePlay_UI_Script _instance = null;
 		PauseUI.SetActive(true);
 		Time.timeScale = 0;
 		Debug.Log("Paused");
+		Cursor.lockState = CursorLockMode.None;
 	}
 	
 	public void ResumeGame(){
 		PauseUI.SetActive(false);
 		Debug.Log("UnPaused");
 		Time.timeScale = 1;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	public void GoToMenu(){
