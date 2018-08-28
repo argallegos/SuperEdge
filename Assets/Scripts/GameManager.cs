@@ -50,7 +50,9 @@ public class GameManager : MonoBehaviour {
                 }
             }
         }
-        if (playerScript.win) winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
+        if (playerScript.win) Win();
+        if (paused && !playerScript.paused) playerScript.paused = true;
+        else if (!paused && playerScript.paused) playerScript.paused = false;
 
     }
 
@@ -77,8 +79,6 @@ public class GameManager : MonoBehaviour {
         
     }
 
-
-
     void Respawn()
     {
         print("Respawn!");
@@ -87,6 +87,22 @@ public class GameManager : MonoBehaviour {
         cam.CamReset();
         cam.cameraMove = true;
     }
+    public void Win()
+    {
+        winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
+        StartCoroutine(DoFade());
+    }
 
+    IEnumerator DoFade()
+    {
+        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+        while (canvasGroup.alpha > 0)
+        {
+            canvasGroup.alpha -= Time.deltaTime / 2;
+            yield return null;
+        }
+        canvasGroup.interactable = false;
+        yield return null;
+    }
 
 }

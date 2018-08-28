@@ -30,6 +30,11 @@ public class Grab : MonoBehaviour {
         {
             climbScript.Climb();
         }
+        else if (other.CompareTag("AddSpeed"))
+        {
+            playerScript.speed = playerScript.speedySpeed;
+        }
+
         if (other.CompareTag("WinCube"))
         {
             playerScript.win = true;

@@ -378,6 +378,7 @@ MonoBehaviour:
   MinutesPassed: 0
   TimerText: {fileID: 114925635650121322}
   PauseUI: {fileID: 1386452187931066}
+  gameManager: {fileID: 0}
   CurrentScore: 0
   ScoreText: {fileID: 114043881993085336}
 --- !u!114 &114043881993085336
