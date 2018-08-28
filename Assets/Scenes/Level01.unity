@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3514164, g: 0.3173822, b: 0.35392648, a: 1}
+  m_IndirectSpecularColor: {r: 0.21130383, g: 0.2197426, b: 0.34004712, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2860,7 +2860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &396818856
 Transform:
   m_ObjectHideFlags: 0
@@ -5463,6 +5463,7 @@ MonoBehaviour:
     Sensitivity: {x: 2, y: 2}
   playerInput: {fileID: 0}
   wallClimb: {fileID: 0}
+  mesh: {fileID: 0}
   win: 0
   paused: 0
 --- !u!114 &762618623
