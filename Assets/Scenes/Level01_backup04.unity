@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45092726, g: 0.45092726, b: 0.45092726, a: 1}
+  m_IndirectSpecularColor: {r: 0.21130383, g: 0.2197426, b: 0.34004712, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5879,7 +5879,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
+  m_Radius: 0.19
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -5907,6 +5907,7 @@ MonoBehaviour:
   inputs: {x: 0, y: 0, z: 0}
   inAir: 0
   falling: 0
+  jumping: 0
   sprinting: 0
   speed: 0
   pInputVertical: 0
@@ -7934,6 +7935,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 92a32d3aa9b72844aad0dc6f3d051fca, type: 2}
+    - target: {fileID: 9500000, guid: 79c4f08ebe6450f4498e4cf3cbc01ac2, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79c4f08ebe6450f4498e4cf3cbc01ac2, type: 3}
   m_IsPrefabAsset: 0
@@ -11142,7 +11147,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 398194611}
   playerCam: {fileID: 534669904}
   debugSpawn: {fileID: 41427487}
-  altSpawn: 1
+  altSpawn: 0
   fallDeathPoint: -40
   restartDelay: 2
   winText: {fileID: 0}
