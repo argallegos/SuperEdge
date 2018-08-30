@@ -22,8 +22,14 @@ protected static GamePlay_UI_Script _instance = null;
 	
 	public int CurrentScore;
 	public Text ScoreText;
+	
+	public float fadeTime, percentFade;
+	public GameObject winScreen;
+	public Text EndTimerText, EndScoreText;
+	public bool winner;
 #endregion
-
+#region General Functions
+	
 	void Start(){
 		if (Instance == null){
 			Instance = this;
@@ -38,6 +44,8 @@ protected static GamePlay_UI_Script _instance = null;
 		
 		CurrentScore = 0;
 		ScoreText.text = "Score: " + CurrentScore;
+		
+		winScreen.GetComponent<CanvasGroup>().alpha = 0f;
 	}
 	
 	void Update(){
@@ -47,20 +55,25 @@ protected static GamePlay_UI_Script _instance = null;
 			PauseGame();
 		}
 		
+		if(Input.GetKeyDown(KeyCode.B)){
+			ShowWinScreen();
+		}
+		
 		if(Input.GetKeyDown(KeyCode.M)){
 			AddScore(10);
 		}
 	}
 	
 	public void UpdateTimeText(){
-		if(SecondsPassed >= 60){
-			SecondsPassed = 0;
-			MinutesPassed += 1;
-		} else{
-			SecondsPassed += Time.deltaTime;
+		if(!winner){
+			if(SecondsPassed >= 60){
+				SecondsPassed = 0;
+				MinutesPassed += 1;
+			} else{
+				SecondsPassed += Time.deltaTime;
+			}
+			TimerText.text = MinutesPassed + ":" + SecondsPassed.ToString("F0");
 		}
-		
-		TimerText.text = MinutesPassed + ":" + SecondsPassed.ToString("F0");
 	}
 	
 	public void AddScore(int Value){
@@ -68,6 +81,22 @@ protected static GamePlay_UI_Script _instance = null;
 		ScoreText.text = "Score: " + CurrentScore;
 	}
 	
+	public void ShowWinScreen(){
+		EndScoreText.text = ScoreText.text;
+		EndTimerText.text = TimerText.text;
+		winner = true;
+		StartCoroutine(FadeRoutine());
+	}
+	
+	IEnumerator FadeRoutine(){
+		while(percentFade < 1f){
+			yield return new WaitForSeconds(0.01f);
+			percentFade += .01f;
+			winScreen.GetComponent<CanvasGroup>().alpha = percentFade;
+		}
+		Time.timeScale = 0;
+	}
+#endregion	
 #region Pause Functions
 	public void PauseGame(){
 		PauseUI.SetActive(true);
