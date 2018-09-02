@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject player, spawnPoint;
+    public GameObject player, UI, spawnPoint;
 
     public Camera playerCam;
     ThirdPersonCamera cam;
     PlayerScript playerScript;
+    GamePlay_UI_Script UIScript;
+
 
     Transform respawnPoint;
     public Transform debugSpawn;
@@ -24,10 +26,24 @@ public class GameManager : MonoBehaviour {
     public Text winText;
     public bool paused = false;
 
+    AudioSource source;
+    bool m_Play;
+    bool m_ToggleChange;
+    public AudioClip music;
+    public AudioClip scream;
+    public float volume;
+    bool isScreaming = false;
+
     void Start () {
         SetSpawn();
         cam = playerCam.GetComponent<ThirdPersonCamera>();
         playerScript = player.GetComponent<PlayerScript>();
+        UIScript = UI.GetComponent<GamePlay_UI_Script>();
+
+        source = GetComponent<AudioSource>();
+        source.Play();
+        //source.clip = scream;
+        m_Play = true;
 
     }
 	
@@ -39,7 +55,7 @@ public class GameManager : MonoBehaviour {
             if (restartReady)
             {
                 Respawn();
-                //if (Input.anyKeyDown) Respawn();
+
             }
             else
             {
@@ -54,16 +70,19 @@ public class GameManager : MonoBehaviour {
         if (paused && !playerScript.paused) playerScript.paused = true;
         else if (!paused && playerScript.paused) playerScript.paused = false;
 
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("WinCube"))
+        if (m_Play == true && m_ToggleChange == true)
         {
-            winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
+            source.Play();
+            m_ToggleChange = false;
+        }
+        if (m_Play == false && m_ToggleChange == true)
+        {
+            source.Stop();
+            m_ToggleChange = false;
         }
 
-    }
+        }
+
 
     void SetSpawn()
     {
@@ -75,8 +94,14 @@ public class GameManager : MonoBehaviour {
     void Dying()
     {
         cam.cameraMove = false;
+
+        if (!isScreaming)
+        {
+            source.PlayOneShot(scream, volume);
+            isScreaming = true;
+        }
         //Respawn();
-        
+
     }
 
     void Respawn()
@@ -86,23 +111,14 @@ public class GameManager : MonoBehaviour {
         player.transform.rotation = respawnPoint.rotation;
         cam.CamReset();
         cam.cameraMove = true;
+        isScreaming = false;
     }
     public void Win()
     {
-        winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
-        StartCoroutine(DoFade());
+        //winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
+        UIScript.ShowWinScreen();
+
     }
 
-    IEnumerator DoFade()
-    {
-        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
-        while (canvasGroup.alpha > 0)
-        {
-            canvasGroup.alpha -= Time.deltaTime / 2;
-            yield return null;
-        }
-        canvasGroup.interactable = false;
-        yield return null;
-    }
 
 }

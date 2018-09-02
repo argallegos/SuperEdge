@@ -103,7 +103,7 @@ public class PlayerScript : MonoBehaviour
                 anim.SetBool("isDoubleRunning", false);
                 anim.SetBool("isJumping", false);
             }
-        print("falling = " + falling + ", OnGround = " + OnGround());
+        //print("falling = " + falling + ", OnGround = " + OnGround());
     }
     private void FixedUpdate()
     {
