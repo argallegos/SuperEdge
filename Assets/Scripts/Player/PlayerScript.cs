@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
         public Vector2 Sensitivity;
     }
 
-    public float moveSpeed, sprintSpeed, speedySpeed, jumpForce;
+    public float moveSpeed, sprintSpeed, jumpForce, launchForce;
 
     public GameObject playerMesh, feet;
     public GameObject animator;
@@ -23,8 +23,7 @@ public class PlayerScript : MonoBehaviour
     public Vector3 aimOffset;
 
     [HideInInspector]
-    public Vector3 facingDirection;
-    public Vector3 inputs = Vector3.zero;
+    public Vector3 facingDirection, inputs = Vector3.zero, launchDirection;
     [HideInInspector]
     public bool inAir, falling, jumping = false, sprinting = false;
     [HideInInspector]
@@ -170,6 +169,12 @@ public class PlayerScript : MonoBehaviour
 
         }
     }
+    public void Launch()
+    {
+        playerRB.AddForce(launchDirection * launchForce);
+    }
+
+
     void Flying()
     {
         if (!falling && playerRB.velocity.y < 0f)

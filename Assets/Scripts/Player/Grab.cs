@@ -32,12 +32,22 @@ public class Grab : MonoBehaviour {
         }
         else if (other.CompareTag("AddSpeed"))
         {
-            playerScript.speed = playerScript.speedySpeed;
+            // playerScript.speed = playerScript.speedySpeed;
+           // playerScript.Launch();
         }
 
         if (other.CompareTag("WinCube"))
         {
             playerScript.win = true;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("AddSpeed"))
+        {
+            playerScript.launchDirection = other.transform.forward;
+            playerScript.Launch();
         }
     }
 

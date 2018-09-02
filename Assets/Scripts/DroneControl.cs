@@ -53,6 +53,10 @@ public class DroneControl : MonoBehaviour {
     void SetDestination(Transform dest)
     {
         destination = dest;
+        Vector3 targetPostition = new Vector3(dest.position.x,
+                               this.transform.position.y,
+                               dest.position.z);
+        this.transform.LookAt(targetPostition);
         direction = (destination.position - transform.position).normalized;
     }
 

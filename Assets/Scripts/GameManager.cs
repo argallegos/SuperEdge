@@ -70,17 +70,9 @@ public class GameManager : MonoBehaviour {
         if (paused && !playerScript.paused) playerScript.paused = true;
         else if (!paused && playerScript.paused) playerScript.paused = false;
 
-        if (m_Play == true && m_ToggleChange == true)
-        {
-            source.Play();
-            m_ToggleChange = false;
-        }
-        if (m_Play == false && m_ToggleChange == true)
-        {
-            source.Stop();
-            m_ToggleChange = false;
-        }
-
+        if (playerScript.inAir) {
+            UIScript.AddScore(1);
+                }
         }
 
 
