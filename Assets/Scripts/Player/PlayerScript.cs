@@ -191,7 +191,12 @@ public class PlayerScript : MonoBehaviour
         //if (falling &&)
         else
         {
-
+            anim.SetBool("isFalling", true);
+            anim.SetBool("isClimbing", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
+            anim.SetBool("isJumping", false);
 
         }
     }
