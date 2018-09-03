@@ -126,6 +126,11 @@ public class PlayerScript : MonoBehaviour
         if (!wallClimb.climbing)
         {
             transform.position += transform.forward * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
+            anim.SetBool("isClimbing", true);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
+            anim.SetBool("isJumping", false);
         }
         else transform.position += transform.up * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
         anim.SetBool("isRunning", true);
@@ -140,9 +145,9 @@ public class PlayerScript : MonoBehaviour
         playerRB.AddForce(Vector3.up * jumpForce);
         inAir = true;
         jumping = true;
-        //anim.SetInteger("AnimState", 2);
         anim.SetBool("isIdle", false);
         anim.SetBool("isRunning", false);
+        anim.SetBool("isDoubleRunning", false);
         anim.SetBool("isJumping", true);
     }
 
