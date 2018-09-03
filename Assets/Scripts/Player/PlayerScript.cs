@@ -75,33 +75,52 @@ public class PlayerScript : MonoBehaviour
         inputs.y = 0f;
         inputs.z = playerInput.Vertical;
 
-        if (playerInput.jump && OnGround()) Jump();
+        if (playerInput.jump && OnGround() && !jumping) Jump();
         /*
         if (!OnGround())
         {
             Flying();
             inAir = true;
         }*/
-        if (falling && OnGround())
+        if (falling)
         {
-            if (inAir) inAir = false;
-            falling = false;
-            //print("on ground!");
+            if (OnGround())
+            {
+                if (inAir) inAir = false;
+                falling = false;
+                anim.SetBool("isFalling", false);
+
+            }
+            else if (!OnGround()) //FALLING
+            {
+                anim.SetBool("isFalling", true);
+                anim.SetBool("isClimbing", false);
+                anim.SetBool("isIdle", false);
+                anim.SetBool("isRunning", false);
+                anim.SetBool("isDoubleRunning", false);
+                anim.SetBool("isJumping", false);
+            }
         }
 
         if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
-        if (!paused) Look();
 
-        if (playerRB.velocity.y < -0.1f) falling = true;
+
+        if (playerRB.velocity.y < -0.1f) {
+            falling = true; 
+            jumping = false;
+        }
 
         if (!falling && !sprinting && !inAir)
-            if (inputs == Vector3.zero)
+            if (inputs == Vector3.zero) //IS IDLE
             {
                 anim.SetBool("isIdle", true);
                 anim.SetBool("isRunning", false);
                 anim.SetBool("isDoubleRunning", false);
                 anim.SetBool("isJumping", false);
             }
+
+        if (!paused) Look();
+
         //print("falling = " + falling + ", OnGround = " + OnGround());
     }
     private void FixedUpdate()
@@ -123,20 +142,23 @@ public class PlayerScript : MonoBehaviour
 
     public void Move(Vector2 direction)
     {
-        if (!wallClimb.climbing)
+        if (!wallClimb.climbing) //NOT CLIMBING
         {
             transform.position += transform.forward * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
-            anim.SetBool("isClimbing", true);
+            anim.SetBool("isClimbing", false);
             anim.SetBool("isIdle", false);
-            anim.SetBool("isRunning", false);
+            anim.SetBool("isRunning", true);
             anim.SetBool("isDoubleRunning", false);
             anim.SetBool("isJumping", false);
         }
-        else transform.position += transform.up * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
-        anim.SetBool("isRunning", true);
-        anim.SetBool("isIdle", false);
-        anim.SetBool("isJumping", false);
-
+        else // IS CLIMBING
+        {
+            transform.position += transform.up * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isClimbing", true);
+        }
 
     }
 
@@ -179,27 +201,6 @@ public class PlayerScript : MonoBehaviour
         playerRB.AddForce(launchDirection * launchForce);
     }
 
-
-    void Flying()
-    {
-        if (!falling && playerRB.velocity.y < 0f)
-        {
-            falling = true;
-
-
-        }
-        //if (falling &&)
-        else
-        {
-            anim.SetBool("isFalling", true);
-            anim.SetBool("isClimbing", false);
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isRunning", false);
-            anim.SetBool("isDoubleRunning", false);
-            anim.SetBool("isJumping", false);
-
-        }
-    }
 
     private bool OnGround()
     {
