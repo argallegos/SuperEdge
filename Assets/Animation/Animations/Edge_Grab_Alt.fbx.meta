@@ -1,0 +1,478 @@
+fileFormatVersion: 2
+guid: 2a83b7484b528934ea7858cd92cf634b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: H_DDS_MidRes
+    100004: Head
+    100006: HeadEnd
+    100008: Hips
+    100010: LeftArm
+    100012: LeftEye
+    100014: LeftFingerBase
+    100016: LeftFoot
+    100018: LeftForeArm
+    100020: LeftHand
+    100022: LeftHandIndex0
+    100024: LeftHandIndex1
+    100026: LeftHandIndex2
+    100028: LeftHandIndex3
+    100030: LeftHandIndex4
+    100032: LeftHandMiddle1
+    100034: LeftHandMiddle2
+    100036: LeftHandMiddle3
+    100038: LeftHandMiddle4
+    100040: LeftHandPinky0
+    100042: LeftHandPinky1
+    100044: LeftHandPinky2
+    100046: LeftHandPinky3
+    100048: LeftHandPinky4
+    100050: LeftHandRing1
+    100052: LeftHandRing2
+    100054: LeftHandRing3
+    100056: LeftHandRing4
+    100058: LeftHandThumb1
+    100060: LeftHandThumb2
+    100062: LeftHandThumb3
+    100064: LeftHandThumb4
+    100066: LeftLeg
+    100068: LeftShoulder
+    100070: LeftToeBase
+    100072: LeftToeEnd
+    100074: LeftUpLeg
+    100076: Lights
+    100078: m_L_eye
+    100080: m_L_gland
+    100082: m_L_trans
+    100084: m_R_eye
+    100086: m_R_gland
+    100088: m_R_trans
+    100090: m_TeethDown
+    100092: m_TeethUp
+    100094: master
+    100096: Neck
+    100098: Reel man 1_Ctrl:ChestEndEffector
+    100100: Reel man 1_Ctrl:ChestOriginEffector
+    100102: Reel man 1_Ctrl:Head
+    100104: Reel man 1_Ctrl:HeadEffector
+    100106: Reel man 1_Ctrl:Hips
+    100108: Reel man 1_Ctrl:HipsEffector
+    100110: Reel man 1_Ctrl:LeftAnkleEffector
+    100112: Reel man 1_Ctrl:LeftArm
+    100114: Reel man 1_Ctrl:LeftElbowEffector
+    100116: Reel man 1_Ctrl:LeftFingerBase
+    100118: Reel man 1_Ctrl:LeftFoot
+    100120: Reel man 1_Ctrl:LeftFootEffector
+    100122: Reel man 1_Ctrl:LeftForeArm
+    100124: Reel man 1_Ctrl:LeftHand
+    100126: Reel man 1_Ctrl:LeftHandEffector
+    100128: Reel man 1_Ctrl:LeftHandIndex1
+    100130: Reel man 1_Ctrl:LeftHandIndex2
+    100132: Reel man 1_Ctrl:LeftHandIndex3
+    100134: Reel man 1_Ctrl:LeftHandIndex4
+    100136: Reel man 1_Ctrl:LeftHandIndexEffector
+    100138: Reel man 1_Ctrl:LeftHandMiddle1
+    100140: Reel man 1_Ctrl:LeftHandMiddle2
+    100142: Reel man 1_Ctrl:LeftHandMiddle3
+    100144: Reel man 1_Ctrl:LeftHandMiddle4
+    100146: Reel man 1_Ctrl:LeftHandMiddleEffector
+    100148: Reel man 1_Ctrl:LeftHandPinky1
+    100150: Reel man 1_Ctrl:LeftHandPinky2
+    100152: Reel man 1_Ctrl:LeftHandPinky3
+    100154: Reel man 1_Ctrl:LeftHandPinky4
+    100156: Reel man 1_Ctrl:LeftHandPinkyEffector
+    100158: Reel man 1_Ctrl:LeftHandRing1
+    100160: Reel man 1_Ctrl:LeftHandRing2
+    100162: Reel man 1_Ctrl:LeftHandRing3
+    100164: Reel man 1_Ctrl:LeftHandRing4
+    100166: Reel man 1_Ctrl:LeftHandRingEffector
+    100168: Reel man 1_Ctrl:LeftHandThumb1
+    100170: Reel man 1_Ctrl:LeftHandThumb2
+    100172: Reel man 1_Ctrl:LeftHandThumb3
+    100174: Reel man 1_Ctrl:LeftHandThumb4
+    100176: Reel man 1_Ctrl:LeftHandThumbEffector
+    100178: Reel man 1_Ctrl:LeftHipEffector
+    100180: Reel man 1_Ctrl:LeftKneeEffector
+    100182: Reel man 1_Ctrl:LeftLeg
+    100184: Reel man 1_Ctrl:LeftShoulder
+    100186: Reel man 1_Ctrl:LeftShoulderEffector
+    100188: Reel man 1_Ctrl:LeftToeBase
+    100190: Reel man 1_Ctrl:LeftUpLeg
+    100192: Reel man 1_Ctrl:LeftWristEffector
+    100194: Reel man 1_Ctrl:Neck
+    100196: Reel man 1_Ctrl:Reference
+    100198: Reel man 1_Ctrl:RightAnkleEffector
+    100200: Reel man 1_Ctrl:RightArm
+    100202: Reel man 1_Ctrl:RightElbowEffector
+    100204: Reel man 1_Ctrl:RightFingerBase
+    100206: Reel man 1_Ctrl:RightFoot
+    100208: Reel man 1_Ctrl:RightFootEffector
+    100210: Reel man 1_Ctrl:RightForeArm
+    100212: Reel man 1_Ctrl:RightHand
+    100214: Reel man 1_Ctrl:RightHandEffector
+    100216: Reel man 1_Ctrl:RightHandIndex1
+    100218: Reel man 1_Ctrl:RightHandIndex2
+    100220: Reel man 1_Ctrl:RightHandIndex3
+    100222: Reel man 1_Ctrl:RightHandIndex4
+    100224: Reel man 1_Ctrl:RightHandIndexEffector
+    100226: Reel man 1_Ctrl:RightHandMiddle1
+    100228: Reel man 1_Ctrl:RightHandMiddle2
+    100230: Reel man 1_Ctrl:RightHandMiddle3
+    100232: Reel man 1_Ctrl:RightHandMiddle4
+    100234: Reel man 1_Ctrl:RightHandMiddleEffector
+    100236: Reel man 1_Ctrl:RightHandPinky1
+    100238: Reel man 1_Ctrl:RightHandPinky2
+    100240: Reel man 1_Ctrl:RightHandPinky3
+    100242: Reel man 1_Ctrl:RightHandPinky4
+    100244: Reel man 1_Ctrl:RightHandPinkyEffector
+    100246: Reel man 1_Ctrl:RightHandRing1
+    100248: Reel man 1_Ctrl:RightHandRing2
+    100250: Reel man 1_Ctrl:RightHandRing3
+    100252: Reel man 1_Ctrl:RightHandRing4
+    100254: Reel man 1_Ctrl:RightHandRingEffector
+    100256: Reel man 1_Ctrl:RightHandThumb1
+    100258: Reel man 1_Ctrl:RightHandThumb2
+    100260: Reel man 1_Ctrl:RightHandThumb3
+    100262: Reel man 1_Ctrl:RightHandThumb4
+    100264: Reel man 1_Ctrl:RightHandThumbEffector
+    100266: Reel man 1_Ctrl:RightHipEffector
+    100268: Reel man 1_Ctrl:RightKneeEffector
+    100270: Reel man 1_Ctrl:RightLeg
+    100272: Reel man 1_Ctrl:RightShoulder
+    100274: Reel man 1_Ctrl:RightShoulderEffector
+    100276: Reel man 1_Ctrl:RightToeBase
+    100278: Reel man 1_Ctrl:RightUpLeg
+    100280: Reel man 1_Ctrl:RightWristEffector
+    100282: Reel man 1_Ctrl:Spine
+    100284: Reel man 1_Ctrl:Spine1
+    100286: Reel man 1_Ctrl:Spine2
+    100288: Reference
+    100290: RightArm
+    100292: RightEye
+    100294: RightFingerBase
+    100296: RightFoot
+    100298: RightForeArm
+    100300: RightHand
+    100302: RightHandIndex0
+    100304: RightHandIndex1
+    100306: RightHandIndex2
+    100308: RightHandIndex3
+    100310: RightHandIndex4
+    100312: RightHandMiddle1
+    100314: RightHandMiddle2
+    100316: RightHandMiddle3
+    100318: RightHandMiddle4
+    100320: RightHandPinky0
+    100322: RightHandPinky1
+    100324: RightHandPinky2
+    100326: RightHandPinky3
+    100328: RightHandPinky4
+    100330: RightHandRing1
+    100332: RightHandRing2
+    100334: RightHandRing3
+    100336: RightHandRing4
+    100338: RightHandThumb1
+    100340: RightHandThumb2
+    100342: RightHandThumb3
+    100344: RightHandThumb4
+    100346: RightLeg
+    100348: RightShoulder
+    100350: RightToeBase
+    100352: RightToeEnd
+    100354: RightUpLeg
+    100356: Spine
+    100358: Spine1
+    100360: Spine2
+    100362: spotLight2
+    100364: spotLight3
+    100366: spotLight4
+    400000: //RootNode
+    400002: H_DDS_MidRes
+    400004: Head
+    400006: HeadEnd
+    400008: Hips
+    400010: LeftArm
+    400012: LeftEye
+    400014: LeftFingerBase
+    400016: LeftFoot
+    400018: LeftForeArm
+    400020: LeftHand
+    400022: LeftHandIndex0
+    400024: LeftHandIndex1
+    400026: LeftHandIndex2
+    400028: LeftHandIndex3
+    400030: LeftHandIndex4
+    400032: LeftHandMiddle1
+    400034: LeftHandMiddle2
+    400036: LeftHandMiddle3
+    400038: LeftHandMiddle4
+    400040: LeftHandPinky0
+    400042: LeftHandPinky1
+    400044: LeftHandPinky2
+    400046: LeftHandPinky3
+    400048: LeftHandPinky4
+    400050: LeftHandRing1
+    400052: LeftHandRing2
+    400054: LeftHandRing3
+    400056: LeftHandRing4
+    400058: LeftHandThumb1
+    400060: LeftHandThumb2
+    400062: LeftHandThumb3
+    400064: LeftHandThumb4
+    400066: LeftLeg
+    400068: LeftShoulder
+    400070: LeftToeBase
+    400072: LeftToeEnd
+    400074: LeftUpLeg
+    400076: Lights
+    400078: m_L_eye
+    400080: m_L_gland
+    400082: m_L_trans
+    400084: m_R_eye
+    400086: m_R_gland
+    400088: m_R_trans
+    400090: m_TeethDown
+    400092: m_TeethUp
+    400094: master
+    400096: Neck
+    400098: Reel man 1_Ctrl:ChestEndEffector
+    400100: Reel man 1_Ctrl:ChestOriginEffector
+    400102: Reel man 1_Ctrl:Head
+    400104: Reel man 1_Ctrl:HeadEffector
+    400106: Reel man 1_Ctrl:Hips
+    400108: Reel man 1_Ctrl:HipsEffector
+    400110: Reel man 1_Ctrl:LeftAnkleEffector
+    400112: Reel man 1_Ctrl:LeftArm
+    400114: Reel man 1_Ctrl:LeftElbowEffector
+    400116: Reel man 1_Ctrl:LeftFingerBase
+    400118: Reel man 1_Ctrl:LeftFoot
+    400120: Reel man 1_Ctrl:LeftFootEffector
+    400122: Reel man 1_Ctrl:LeftForeArm
+    400124: Reel man 1_Ctrl:LeftHand
+    400126: Reel man 1_Ctrl:LeftHandEffector
+    400128: Reel man 1_Ctrl:LeftHandIndex1
+    400130: Reel man 1_Ctrl:LeftHandIndex2
+    400132: Reel man 1_Ctrl:LeftHandIndex3
+    400134: Reel man 1_Ctrl:LeftHandIndex4
+    400136: Reel man 1_Ctrl:LeftHandIndexEffector
+    400138: Reel man 1_Ctrl:LeftHandMiddle1
+    400140: Reel man 1_Ctrl:LeftHandMiddle2
+    400142: Reel man 1_Ctrl:LeftHandMiddle3
+    400144: Reel man 1_Ctrl:LeftHandMiddle4
+    400146: Reel man 1_Ctrl:LeftHandMiddleEffector
+    400148: Reel man 1_Ctrl:LeftHandPinky1
+    400150: Reel man 1_Ctrl:LeftHandPinky2
+    400152: Reel man 1_Ctrl:LeftHandPinky3
+    400154: Reel man 1_Ctrl:LeftHandPinky4
+    400156: Reel man 1_Ctrl:LeftHandPinkyEffector
+    400158: Reel man 1_Ctrl:LeftHandRing1
+    400160: Reel man 1_Ctrl:LeftHandRing2
+    400162: Reel man 1_Ctrl:LeftHandRing3
+    400164: Reel man 1_Ctrl:LeftHandRing4
+    400166: Reel man 1_Ctrl:LeftHandRingEffector
+    400168: Reel man 1_Ctrl:LeftHandThumb1
+    400170: Reel man 1_Ctrl:LeftHandThumb2
+    400172: Reel man 1_Ctrl:LeftHandThumb3
+    400174: Reel man 1_Ctrl:LeftHandThumb4
+    400176: Reel man 1_Ctrl:LeftHandThumbEffector
+    400178: Reel man 1_Ctrl:LeftHipEffector
+    400180: Reel man 1_Ctrl:LeftKneeEffector
+    400182: Reel man 1_Ctrl:LeftLeg
+    400184: Reel man 1_Ctrl:LeftShoulder
+    400186: Reel man 1_Ctrl:LeftShoulderEffector
+    400188: Reel man 1_Ctrl:LeftToeBase
+    400190: Reel man 1_Ctrl:LeftUpLeg
+    400192: Reel man 1_Ctrl:LeftWristEffector
+    400194: Reel man 1_Ctrl:Neck
+    400196: Reel man 1_Ctrl:Reference
+    400198: Reel man 1_Ctrl:RightAnkleEffector
+    400200: Reel man 1_Ctrl:RightArm
+    400202: Reel man 1_Ctrl:RightElbowEffector
+    400204: Reel man 1_Ctrl:RightFingerBase
+    400206: Reel man 1_Ctrl:RightFoot
+    400208: Reel man 1_Ctrl:RightFootEffector
+    400210: Reel man 1_Ctrl:RightForeArm
+    400212: Reel man 1_Ctrl:RightHand
+    400214: Reel man 1_Ctrl:RightHandEffector
+    400216: Reel man 1_Ctrl:RightHandIndex1
+    400218: Reel man 1_Ctrl:RightHandIndex2
+    400220: Reel man 1_Ctrl:RightHandIndex3
+    400222: Reel man 1_Ctrl:RightHandIndex4
+    400224: Reel man 1_Ctrl:RightHandIndexEffector
+    400226: Reel man 1_Ctrl:RightHandMiddle1
+    400228: Reel man 1_Ctrl:RightHandMiddle2
+    400230: Reel man 1_Ctrl:RightHandMiddle3
+    400232: Reel man 1_Ctrl:RightHandMiddle4
+    400234: Reel man 1_Ctrl:RightHandMiddleEffector
+    400236: Reel man 1_Ctrl:RightHandPinky1
+    400238: Reel man 1_Ctrl:RightHandPinky2
+    400240: Reel man 1_Ctrl:RightHandPinky3
+    400242: Reel man 1_Ctrl:RightHandPinky4
+    400244: Reel man 1_Ctrl:RightHandPinkyEffector
+    400246: Reel man 1_Ctrl:RightHandRing1
+    400248: Reel man 1_Ctrl:RightHandRing2
+    400250: Reel man 1_Ctrl:RightHandRing3
+    400252: Reel man 1_Ctrl:RightHandRing4
+    400254: Reel man 1_Ctrl:RightHandRingEffector
+    400256: Reel man 1_Ctrl:RightHandThumb1
+    400258: Reel man 1_Ctrl:RightHandThumb2
+    400260: Reel man 1_Ctrl:RightHandThumb3
+    400262: Reel man 1_Ctrl:RightHandThumb4
+    400264: Reel man 1_Ctrl:RightHandThumbEffector
+    400266: Reel man 1_Ctrl:RightHipEffector
+    400268: Reel man 1_Ctrl:RightKneeEffector
+    400270: Reel man 1_Ctrl:RightLeg
+    400272: Reel man 1_Ctrl:RightShoulder
+    400274: Reel man 1_Ctrl:RightShoulderEffector
+    400276: Reel man 1_Ctrl:RightToeBase
+    400278: Reel man 1_Ctrl:RightUpLeg
+    400280: Reel man 1_Ctrl:RightWristEffector
+    400282: Reel man 1_Ctrl:Spine
+    400284: Reel man 1_Ctrl:Spine1
+    400286: Reel man 1_Ctrl:Spine2
+    400288: Reference
+    400290: RightArm
+    400292: RightEye
+    400294: RightFingerBase
+    400296: RightFoot
+    400298: RightForeArm
+    400300: RightHand
+    400302: RightHandIndex0
+    400304: RightHandIndex1
+    400306: RightHandIndex2
+    400308: RightHandIndex3
+    400310: RightHandIndex4
+    400312: RightHandMiddle1
+    400314: RightHandMiddle2
+    400316: RightHandMiddle3
+    400318: RightHandMiddle4
+    400320: RightHandPinky0
+    400322: RightHandPinky1
+    400324: RightHandPinky2
+    400326: RightHandPinky3
+    400328: RightHandPinky4
+    400330: RightHandRing1
+    400332: RightHandRing2
+    400334: RightHandRing3
+    400336: RightHandRing4
+    400338: RightHandThumb1
+    400340: RightHandThumb2
+    400342: RightHandThumb3
+    400344: RightHandThumb4
+    400346: RightLeg
+    400348: RightShoulder
+    400350: RightToeBase
+    400352: RightToeEnd
+    400354: RightUpLeg
+    400356: Spine
+    400358: Spine1
+    400360: Spine2
+    400362: spotLight2
+    400364: spotLight3
+    400366: spotLight4
+    2100000: _Body_Mid
+    2100002: _Eye_trans
+    4300000: m_TeethDown
+    4300002: m_TeethUp
+    4300004: m_L_gland
+    4300006: m_L_eye
+    4300008: m_L_trans
+    4300010: m_R_gland
+    4300012: m_R_eye
+    4300014: m_R_trans
+    4300016: H_DDS_MidRes
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: H_DDS_MidRes
+    13700002: m_L_eye
+    13700004: m_L_gland
+    13700006: m_L_trans
+    13700008: m_R_eye
+    13700010: m_R_gland
+    13700012: m_R_trans
+    13700014: m_TeethDown
+    13700016: m_TeethUp
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
