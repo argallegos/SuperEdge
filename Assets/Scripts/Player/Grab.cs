@@ -24,6 +24,7 @@ public class Grab : MonoBehaviour {
             gripScript.hangPos = new Vector3(player.transform.position.x, other.transform.position.y, player.transform.position.z);
             gripScript.Hang();
             gripScript.hanging = true;
+            playerScript.AnimState("hang");
 
         }
         else if (other.CompareTag("Wall"))
@@ -56,6 +57,8 @@ public class Grab : MonoBehaviour {
         if (other.CompareTag("Edge"))
         {
             gripScript.StopHang();
+
+
         }
         else if (other.CompareTag("Wall"))
         {

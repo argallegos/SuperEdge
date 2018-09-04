@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour {
         else if (!paused && playerScript.paused) playerScript.paused = false;
 
         if (playerScript.inAir) {
-            UIScript.AddScore(1);
+            UIScript.AddScore(0.1f);
                 }
         }
 

@@ -7391,6 +7391,7 @@ MonoBehaviour:
   falling: 0
   jumping: 0
   sprinting: 0
+  hanging: 0
   speed: 0
   pInputVertical: 0
   pInputHorizontal: 0
@@ -9614,7 +9615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9635,6 +9636,14 @@ Prefab:
     - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_LocalPosition.x
       value: -9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332320852196990, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868716113356442, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
@@ -14263,7 +14272,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 398194611}
   playerCam: {fileID: 534669904}
   debugSpawn: {fileID: 41427487}
-  altSpawn: 0
+  altSpawn: 1
   fallDeathPoint: -40
   restartDelay: 2
   winText: {fileID: 0}

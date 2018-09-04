@@ -20,7 +20,7 @@ protected static GamePlay_UI_Script _instance = null;
     public GameObject gameManager;
     GameManager manager;
 	
-	public int CurrentScore;
+	public float CurrentScore;
 	public Text ScoreText;
 	
 	public float fadeTime, percentFade;
@@ -76,9 +76,10 @@ protected static GamePlay_UI_Script _instance = null;
 		}
 	}
 	
-	public void AddScore(int Value){
+	public void AddScore(float Value){
 		CurrentScore += Value;
-		ScoreText.text = "Score: " + CurrentScore;
+
+        ScoreText.text = "Score: " + (Mathf.RoundToInt(CurrentScore));
 	}
 	
 	public void ShowWinScreen(){

@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector]
     public Vector3 facingDirection, inputs = Vector3.zero, launchDirection;
     [HideInInspector]
-    public bool inAir, falling, jumping = false, sprinting = false;
+    public bool inAir, falling, jumping = false, sprinting = false, hanging = false;
     [HideInInspector]
     public float speed, pInputVertical, pInputHorizontal, camY;
 
@@ -91,32 +91,33 @@ public class PlayerScript : MonoBehaviour
                 anim.SetBool("isFalling", false);
 
             }
-            else if (!OnGround()) //FALLING
+            else if (!OnGround() && !hanging) //FALLING
             {
-                anim.SetBool("isFalling", true);
-                anim.SetBool("isClimbing", false);
-                anim.SetBool("isIdle", false);
-                anim.SetBool("isRunning", false);
-                anim.SetBool("isDoubleRunning", false);
-                anim.SetBool("isJumping", false);
+                AnimState("falling");
+
             }
         }
 
         if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
 
 
-        if (playerRB.velocity.y < -0.1f) {
-            falling = true; 
+        if (playerRB.velocity.y < -0.7f) {
             jumping = false;
+            if (!jumping) falling = true; 
+            //jumping = false;
+            //print(playerRB.velocity.y);
+            
+        }
+        else if (playerRB.velocity.y >= 0)
+        {
+            falling = false;
+            if (jumping && OnGround()) jumping = false;
         }
 
-        if (!falling && !sprinting && !inAir)
+        if (!falling && !sprinting && !inAir && !hanging)
             if (inputs == Vector3.zero) //IS IDLE
             {
-                anim.SetBool("isIdle", true);
-                anim.SetBool("isRunning", false);
-                anim.SetBool("isDoubleRunning", false);
-                anim.SetBool("isJumping", false);
+                AnimState("idle");
             }
 
         if (!paused) Look();
@@ -145,19 +146,15 @@ public class PlayerScript : MonoBehaviour
         if (!wallClimb.climbing) //NOT CLIMBING
         {
             transform.position += transform.forward * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
-            anim.SetBool("isClimbing", false);
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isRunning", true);
-            anim.SetBool("isDoubleRunning", false);
-            anim.SetBool("isJumping", false);
+            if (!sprinting) AnimState("run");
+            else AnimState("sprint");
+
         }
         else // IS CLIMBING
         {
             transform.position += transform.up * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
-            anim.SetBool("isRunning", false);
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isJumping", false);
-            anim.SetBool("isClimbing", true);
+            AnimState("climb");
+
         }
 
     }
@@ -167,10 +164,8 @@ public class PlayerScript : MonoBehaviour
         playerRB.AddForce(Vector3.up * jumpForce);
         inAir = true;
         jumping = true;
-        anim.SetBool("isIdle", false);
-        anim.SetBool("isRunning", false);
-        anim.SetBool("isDoubleRunning", false);
-        anim.SetBool("isJumping", true);
+        AnimState("jump");
+
     }
 
     void Sprint()
@@ -179,10 +174,6 @@ public class PlayerScript : MonoBehaviour
         {
             sprinting = true;
             speed = sprintSpeed;
-
-            anim.SetBool("isDoubleRunning", true);
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isRunning", false);
 
         }
         else
@@ -206,5 +197,68 @@ public class PlayerScript : MonoBehaviour
         return Physics.Raycast(feet.transform.position, Vector3.down, .6f);
     }
 
+    public void AnimState(string state)
+    {
+        if (state == "idle")
+        {
+            anim.SetBool("isIdle", true);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
+            anim.SetBool("isJumping", false);
+        }
+        else if (state == "run")
+        {
+            anim.SetBool("isClimbing", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", true);
+            anim.SetBool("isDoubleRunning", false);
+            anim.SetBool("isJumping", false);
+        }
+        else if (state == "sprint")
+        {
+            anim.SetBool("isDoubleRunning", true);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
+        }
+        else if (state == "jump")
+        {
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
+            anim.SetBool("isJumping", true);
+            anim.SetBool("isHanging", false);
+        }
+        else if (state == "falling")
+        {
+            anim.SetBool("isFalling", true);
+            anim.SetBool("isClimbing", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isHanging", false);
+        }
+        else if (state == "hang")
+        {
+            anim.SetBool("isHanging", true);
+            anim.SetBool("isClimbing", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isFalling", false);
+        }
+        else if (state == "grab")
+        {
+
+        }
+        else if (state == "climb")
+        {
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isClimbing", true);
+        }
+    }
 
 }
