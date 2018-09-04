@@ -24,7 +24,17 @@ public class Grab : MonoBehaviour {
             gripScript.hangPos = new Vector3(player.transform.position.x, other.transform.position.y, player.transform.position.z);
             gripScript.Hang();
             gripScript.hanging = true;
+            playerScript.AnimState("hang");
 
+        }
+        else if (other.CompareTag("DroneEdge"))
+        {
+            print("Grabbing Drone!");
+            gripScript.hangPos = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
+            gripScript.Hang();
+            gripScript.hanging = true;
+            gripScript.droneHang = true;
+            playerScript.AnimState("hang");
         }
         else if (other.CompareTag("Wall"))
         {
@@ -36,7 +46,7 @@ public class Grab : MonoBehaviour {
            // playerScript.Launch();
         }
 
-        if (other.CompareTag("WinCube"))
+        else if (other.CompareTag("WinCube"))
         {
             playerScript.win = true;
         }
@@ -49,11 +59,15 @@ public class Grab : MonoBehaviour {
             playerScript.launchDirection = other.transform.forward;
             playerScript.Launch();
         }
+        else if (other.CompareTag("DroneEdge"))
+        {
+            gripScript.hangPos = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Edge"))
+        if (other.CompareTag("Edge") || other.CompareTag("DroneEdge"))
         {
             gripScript.StopHang();
         }

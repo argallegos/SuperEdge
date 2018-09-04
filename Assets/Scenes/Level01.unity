@@ -3163,42 +3163,6 @@ Prefab:
       propertyPath: m_Name
       value: PlatformDrone (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4207530367292046, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 4207530367292046, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 35.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4143612607916214, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4143612607916214, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4143612607916214, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4207530367292046, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
   m_IsPrefabAsset: 0
@@ -7332,6 +7296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hanging: 0
+  droneHang: 0
   jumpUpForce: 400
   hangHeight: 0
   hangOffset: 1
@@ -7391,6 +7356,7 @@ MonoBehaviour:
   falling: 0
   jumping: 0
   sprinting: 0
+  hanging: 0
   speed: 0
   pInputVertical: 0
   pInputHorizontal: 0
@@ -9614,7 +9580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9635,6 +9601,14 @@ Prefab:
     - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_LocalPosition.x
       value: -9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332320852196990, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868716113356442, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
@@ -11241,11 +11215,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1868716113356442, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1868716113356442, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
       propertyPath: m_Name
       value: testingDrone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207530367292046, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207530367292046, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512935516584556, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8f3b0f3a4de044eb4164aaa037e8ca, type: 2}
@@ -14262,8 +14252,8 @@ MonoBehaviour:
   UI: {fileID: 829230623}
   spawnPoint: {fileID: 398194611}
   playerCam: {fileID: 534669904}
-  debugSpawn: {fileID: 41427487}
-  altSpawn: 0
+  debugSpawn: {fileID: 99932739}
+  altSpawn: 1
   fallDeathPoint: -40
   restartDelay: 2
   winText: {fileID: 0}
