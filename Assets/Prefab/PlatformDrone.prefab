@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 65195466829716086}
   m_Layer: 0
   m_Name: edgeLeft
-  m_TagString: Edge
+  m_TagString: DroneEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 65931026843470422}
   m_Layer: 0
   m_Name: edgeRight
-  m_TagString: Edge
+  m_TagString: DroneEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 1332320852196990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4752080564599816}
   - {fileID: 4318063711224152}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1147733433688052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.89, z: 0}
+  m_LocalPosition: {x: 3, y: 0.65, z: -1.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4861065788285990}
@@ -286,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1601473301923810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.85, z: 1.39}
+  m_LocalPosition: {x: 0.2, y: 22, z: 35.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4861065788285990}
@@ -316,7 +316,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868716113356442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.26, y: 2.31, z: 9.43}
+  m_LocalPosition: {x: 8.220001, y: 9.380001, z: 74.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4143612607916214}
@@ -694,7 +694,6 @@ MonoBehaviour:
   pos1: {fileID: 4207530367292046}
   pos2: {fileID: 4512935516584556}
   drone: {fileID: 1332320852196990}
-  target: {fileID: 0}
   moveSpeed: 2
   waitTime: 0.5
 --- !u!198 &198888939941766932

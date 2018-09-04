@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour {
     public bool paused = false;
 
     AudioSource source;
-    bool m_Play;
-    bool m_ToggleChange;
     public AudioClip music;
     public AudioClip scream;
     public float volume;
@@ -43,7 +41,6 @@ public class GameManager : MonoBehaviour {
         source = GetComponent<AudioSource>();
         source.Play();
         //source.clip = scream;
-        m_Play = true;
 
     }
 	

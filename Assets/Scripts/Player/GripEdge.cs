@@ -8,7 +8,7 @@ public class GripEdge : MonoBehaviour {
     PlayerScript playerScript;
 
     [HideInInspector]
-    public bool hanging;
+    public bool hanging, droneHang;
 
     public float jumpUpForce, hangHeight, hangOffset;
 
@@ -23,6 +23,10 @@ public class GripEdge : MonoBehaviour {
 	void Update () {
 		if (hanging)
         {
+            if (droneHang)
+            {
+                playerScript.transform.position = new Vector3(hangPos.x, hangPos.y - hangOffset, hangPos.z);
+            }
             if (playerScript.playerInput.jump)
             {
                 StopHang();
@@ -34,9 +38,7 @@ public class GripEdge : MonoBehaviour {
                 StopHang();
                 playerScript.AnimState("falling");
             }
-
         }
-
 	}
 
     public void Hang ()
