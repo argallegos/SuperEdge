@@ -192,7 +192,6 @@ public class PlayerScript : MonoBehaviour
 
             anim.SetBool("isDoubleRunning", false);
             anim.SetBool("isIdle", true);
-            //anim.SetInteger("AnimState", 1);
 
         }
     }
