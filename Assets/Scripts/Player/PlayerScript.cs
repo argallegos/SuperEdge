@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//Alex Gallegos main player script
 
 public class PlayerScript : MonoBehaviour
 {
@@ -37,23 +36,19 @@ public class PlayerScript : MonoBehaviour
     public CameraPivot cameraPivot;
 
     [SerializeField] MouseInput MouseControl;
+    Vector2 mouseInput;
 
     public InputController playerInput;
     public WallClimb wallClimb;
-    public GameObject mesh;
-    Vector2 mouseInput;
 
     public bool win = false;
     public bool paused = false;
-
 
     void Awake()
     {
         playerInput = GetComponent<InputController>();
         wallClimb = GetComponent<WallClimb>();
-
         anim = animator.GetComponent<Animator>();
-
         playerRB = GetComponent<Rigidbody>();
         playerRB.isKinematic = false;
         playerRB.velocity = Vector3.zero;
@@ -66,8 +61,6 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-
-        pInputHorizontal = playerInput.Horizontal;
         direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
 
         inputs = Vector3.zero;
@@ -76,37 +69,26 @@ public class PlayerScript : MonoBehaviour
         inputs.z = playerInput.Vertical;
 
         if (playerInput.jump && OnGround() && !jumping) Jump();
-        /*
-        if (!OnGround())
-        {
-            Flying();
-            inAir = true;
-        }*/
+
         if (falling)
         {
             if (OnGround())
             {
+                anim.SetBool("isFalling", false);
                 if (inAir) inAir = false;
                 falling = false;
-                anim.SetBool("isFalling", false);
-
             }
             else if (!OnGround() && !hanging) //FALLING
             {
                 AnimState("falling");
-
             }
         }
 
         if ((playerInput.shift && !sprinting) || (!playerInput.shift && sprinting)) Sprint();
 
-
         if (playerRB.velocity.y < -0.7f) {
             jumping = false;
             if (!jumping) falling = true; 
-            //jumping = false;
-            //print(playerRB.velocity.y);
-            
         }
         else if (playerRB.velocity.y >= 0)
         {
@@ -121,14 +103,12 @@ public class PlayerScript : MonoBehaviour
             }
 
         if (!paused) Look();
-
-        //print("falling = " + falling + ", OnGround = " + OnGround());
     }
+
     private void FixedUpdate()
     {
         direction.Set(playerInput.Vertical * speed, playerInput.Horizontal * speed);
         if (inputs != Vector3.zero && !wallClimb.climbing) Move(direction);
-
     }
 
     void Look()
@@ -138,7 +118,6 @@ public class PlayerScript : MonoBehaviour
 
         transform.Rotate(Vector3.up * mouseInput.x * MouseControl.Sensitivity.x);
         camY = mouseInput.y * MouseControl.Sensitivity.y;
-
     }
 
     public void Move(Vector2 direction)
@@ -154,7 +133,6 @@ public class PlayerScript : MonoBehaviour
         {
             transform.position += transform.up * direction.x * Time.fixedDeltaTime + transform.right * direction.y * Time.fixedDeltaTime;
             AnimState("climb");
-
         }
 
     }
@@ -165,7 +143,6 @@ public class PlayerScript : MonoBehaviour
         inAir = true;
         jumping = true;
         AnimState("jump");
-
     }
 
     void Sprint()
@@ -174,7 +151,6 @@ public class PlayerScript : MonoBehaviour
         {
             sprinting = true;
             speed = sprintSpeed;
-
         }
         else
         {
@@ -183,20 +159,21 @@ public class PlayerScript : MonoBehaviour
 
             anim.SetBool("isDoubleRunning", false);
             anim.SetBool("isIdle", true);
-
         }
     }
+
     public void Launch()
     {
         playerRB.AddForce(launchDirection * launchForce);
     }
-
 
     private bool OnGround()
     {
         return Physics.Raycast(feet.transform.position, Vector3.down, .6f);
     }
 
+
+    #region Animation States
     public void AnimState(string state)
     {
         if (state == "idle")
@@ -255,10 +232,14 @@ public class PlayerScript : MonoBehaviour
         else if (state == "climb")
         {
             anim.SetBool("isRunning", false);
+            anim.SetBool("isDoubleRunning", false);
             anim.SetBool("isIdle", false);
             anim.SetBool("isJumping", false);
+            anim.SetBool("isFalling", false);
+            anim.SetBool("isHanging", false);
             anim.SetBool("isClimbing", true);
         }
     }
+    #endregion
 
 }

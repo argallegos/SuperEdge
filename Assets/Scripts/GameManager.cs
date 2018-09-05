@@ -12,18 +12,13 @@ public class GameManager : MonoBehaviour {
     PlayerScript playerScript;
     GamePlay_UI_Script UIScript;
 
-
     Transform respawnPoint;
-    public Transform debugSpawn;
-    public bool altSpawn;
-
+    public Transform debugSpawn1, debugSpawn2, debugSpawn3, debugSpawn4, debugSpawn5;
 
     public float fallDeathPoint;
-
     public float restartDelay = 1f;
     private bool restartReady = false;
     private float restartCounter = 0f;
-    public Text winText;
     public bool paused = false;
 
     AudioSource source;
@@ -33,14 +28,13 @@ public class GameManager : MonoBehaviour {
     bool isScreaming = false;
 
     void Start () {
-        SetSpawn();
+        respawnPoint = spawnPoint.transform;
         cam = playerCam.GetComponent<ThirdPersonCamera>();
         playerScript = player.GetComponent<PlayerScript>();
         UIScript = UI.GetComponent<GamePlay_UI_Script>();
 
         source = GetComponent<AudioSource>();
         source.Play();
-        //source.clip = scream;
 
     }
 	
@@ -63,21 +57,54 @@ public class GameManager : MonoBehaviour {
                 }
             }
         }
+
         if (playerScript.win) Win();
+
         if (paused && !playerScript.paused) playerScript.paused = true;
         else if (!paused && playerScript.paused) playerScript.paused = false;
 
-        if (playerScript.inAir) {
-            UIScript.AddScore(0.1f);
-                }
-        }
+        if (playerScript.inAir) UIScript.AddScore(0.1f);
 
+        if (Input.GetKeyDown(KeyCode.Alpha1)) SetSpawn(1);
+        if (Input.GetKeyDown(KeyCode.Alpha2)) SetSpawn(2);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) SetSpawn(3);
+        if (Input.GetKeyDown(KeyCode.Alpha4)) SetSpawn(4);
+        if (Input.GetKeyDown(KeyCode.Alpha5)) SetSpawn(5);
+        if (Input.GetKeyDown(KeyCode.Alpha0)) SetSpawn(0);
+    }
 
-    void SetSpawn()
+    void SetSpawn(int number)
     {
-        if (altSpawn) respawnPoint = debugSpawn;
-
-        else respawnPoint = spawnPoint.transform;
+        if (number == 1)
+        {
+            respawnPoint = debugSpawn1;
+            Respawn();
+        }
+        if (number == 2)
+        {
+            respawnPoint = debugSpawn2;
+            Respawn();
+        }
+        if (number == 3)
+        {
+            respawnPoint = debugSpawn3;
+            Respawn();
+        }
+        if (number == 4)
+        {
+            respawnPoint = debugSpawn4;
+            Respawn();
+        }
+        if (number == 5)
+        {
+            respawnPoint = debugSpawn5;
+            Respawn();
+        }
+        if (number == 0)
+        {
+            respawnPoint = spawnPoint.transform;
+            Respawn();
+        }
     }
 
     void Dying()
@@ -89,13 +116,10 @@ public class GameManager : MonoBehaviour {
             source.PlayOneShot(scream, volume);
             isScreaming = true;
         }
-        //Respawn();
-
     }
 
     void Respawn()
     {
-        print("Respawn!");
         player.transform.position = respawnPoint.position;
         player.transform.rotation = respawnPoint.rotation;
         cam.CamReset();
@@ -104,10 +128,7 @@ public class GameManager : MonoBehaviour {
     }
     public void Win()
     {
-        //winText.text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!! ";
         UIScript.ShowWinScreen();
-
     }
-
 
 }

@@ -30,7 +30,6 @@ public class WallClimb : MonoBehaviour {
         if (playerScript.playerRB.velocity.y > 1f && playerScript.playerInput.Vertical > 0f)
         {
             climbing = true;
-            print("climbing");
         }
     }
 

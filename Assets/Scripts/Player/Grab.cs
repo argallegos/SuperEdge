@@ -20,7 +20,6 @@ public class Grab : MonoBehaviour {
     {
         if (other.CompareTag("Edge"))
         {
-            print("Grabbing!");
             gripScript.hangPos = new Vector3(player.transform.position.x, other.transform.position.y, player.transform.position.z);
             gripScript.Hang();
             gripScript.hanging = true;
@@ -29,7 +28,6 @@ public class Grab : MonoBehaviour {
         }
         else if (other.CompareTag("DroneEdge"))
         {
-            print("Grabbing Drone!");
             gripScript.hangPos = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
             gripScript.Hang();
             gripScript.hanging = true;
@@ -39,11 +37,6 @@ public class Grab : MonoBehaviour {
         else if (other.CompareTag("Wall"))
         {
             climbScript.Climb();
-        }
-        else if (other.CompareTag("AddSpeed"))
-        {
-            // playerScript.speed = playerScript.speedySpeed;
-           // playerScript.Launch();
         }
 
         else if (other.CompareTag("WinCube"))
@@ -73,7 +66,6 @@ public class Grab : MonoBehaviour {
         }
         else if (other.CompareTag("Wall"))
         {
-            print("not climbing");
             climbScript.StopClimb();
         }
     }

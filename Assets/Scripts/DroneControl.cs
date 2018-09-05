@@ -9,7 +9,6 @@ public class DroneControl : MonoBehaviour {
     Vector3 direction;
     Transform destination;
     public GameObject drone;
-   // public Transform target;
     Rigidbody droneRB;
     public float moveSpeed;
 
@@ -40,22 +39,14 @@ public class DroneControl : MonoBehaviour {
             if (waitCounter >= waitTime)
             {
                 EndWait();
-
             }
         }
-        /*
-        Vector3 targetPostition = new Vector3(target.position.x,
-                                       this.transform.position.y,
-                                       target.position.z);
-        this.transform.LookAt(targetPostition); */
     }
 
     void SetDestination(Transform dest)
     {
         destination = dest;
-        Vector3 targetPostition = new Vector3(dest.position.x,
-                               this.transform.position.y,
-                               dest.position.z);
+        Vector3 targetPostition = new Vector3(dest.position.x, this.transform.position.y, dest.position.z);
         this.transform.LookAt(targetPostition);
         direction = (destination.position - transform.position).normalized;
     }
