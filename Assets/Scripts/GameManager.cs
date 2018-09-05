@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour {
 
         source = GetComponent<AudioSource>();
         source.Play();
+		Cursor.lockState = CursorLockMode.Locked;
 
     }
 	

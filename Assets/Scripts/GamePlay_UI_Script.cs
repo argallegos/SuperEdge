@@ -62,6 +62,18 @@ protected static GamePlay_UI_Script _instance = null;
 		if(Input.GetKeyDown(KeyCode.M)){
 			AddScore(10);
 		}
+		
+		if(Input.GetKeyDown(KeyCode.J)){
+			ResumeGame();
+		}
+		
+		if(Input.GetKeyDown(KeyCode.K)){
+			GoToMenu();
+		}
+		
+		if(Input.GetKeyDown(KeyCode.L)){
+			ExitGame();
+		}
 	}
 	
 	public void UpdateTimeText(){
